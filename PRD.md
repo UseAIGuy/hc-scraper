@@ -1,0 +1,90 @@
+HappyCow Scraper Setup Guide
+📋 Requirements
+Python Dependencies (requirements.txt)
+# Core scraping
+crawl4ai>=0.2.0
+playwright>=1.40.0
+asyncio-throttle>=1.0.2
+
+# Data processing
+pydantic>=2.0.0
+pandas>=2.0.0
+asyncpg>=0.29.0
+
+# Database
+supabase>=2.0.0
+psycopg2-binary>=2.9.0
+
+# AI/LLM (optional - for local extraction)
+ollama>=0.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+loguru>=0.7.0
+rich>=13.0.0
+System Dependencies
+bash
+# Install Playwright browsers
+playwright install
+
+# For local LLM (optional but recommended for cost-free extraction)
+# Install Ollama: https://ollama.ai/
+curl -fsSL https://ollama.ai/install.sh | sh
+ollama pull llama2  # or ollama pull mistral
+🚀 Quick Setup
+1. Environment Setup
+bash
+# Create project directory
+mkdir happycow-scraper
+cd happycow-scraper
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+playwright install
+2. Supabase Setup
+Create Supabase Project
+Go to supabase.com
+Create new project
+Copy your project URL and anon key
+Run Database Setup
+Open Supabase SQL Editor
+Paste and run the SQL schema from the database setup artifact
+Verify tables are created
+Environment Configuration
+bash
+# Create .env file
+cat > .env << EOF
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your-anon-key-here
+USE_LOCAL_LLM=true
+LOG_LEVEL=INFO
+EOF
+3. Test Run
+python
+# test_scraper.py
+import asyncio
+from scraper import HappyCowScraper
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+async def test():
+    supabase_url = os.getenv('SUPABASE_URL')
+    supabase_key = os.getenv('SUPABASE_KEY')
+    
+    async with HappyCowScraper(supabase_url, supabase_key) as scraper:
+        # Test with single city, limited restaurants
+        result = await scraper.scrape_city_complete(
+            "https://www.happycow.net/north_america/usa/texas/austin/",
+            "Austin",
+            max_restaurants=2  # Limit for testing
+        )
+        print(f"Test result: {result}")
+
+if __name__ == "__main__":
+    asyncio.run(test())
