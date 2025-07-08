@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: LLM-Based Complex Extraction
+# Status: pending
+# Dependencies: 5 (Not found)
+# Priority: medium
+# Description: Implement LLM extraction for complex cases where structured methods fail
+# Details:
+Use Ollama/LLM to extract data from complex or non-standard page layouts as final fallback.
+
+# Test Strategy:
+Test LLM accuracy and performance on edge cases

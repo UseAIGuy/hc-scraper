@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: CSS Selector-Based Data Extraction
+# Status: pending
+# Dependencies: 3 (Not found)
+# Priority: high
+# Description: Implement primary extraction strategy using CSS selectors for common page elements
+# Details:
+Map HappyCow page structure to CSS selectors for extracting address, phone, hours, ratings, etc.
+
+# Test Strategy:
+Test extraction accuracy across multiple restaurant pages

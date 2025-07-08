@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Update Database Schema
+# Status: pending
+# Dependencies: 1 (Not found)
+# Priority: high
+# Description: Add new columns to restaurants table for enhanced data fields
+# Details:
+Create Supabase migration to add columns for all new RestaurantDetail fields. Ensure proper data types and constraints.
+
+# Test Strategy:
+Test migration rollback and data integrity

@@ -16,6 +16,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel, Field
 from supabase import create_client, Client
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, CacheMode
+from bs4 import BeautifulSoup
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -35,18 +36,17 @@ class RestaurantListing(BaseModel):
     is_new: bool = Field(False, description="Is this marked as new")
 
 class RestaurantDetail(BaseModel):
-    """Complete restaurant data model matching Supabase schema"""
+    """Complete restaurant data model matching Supabase schema exactly"""
     # Basic Info
     name: str = Field(..., description="Restaurant name")
     description: Optional[str] = Field(None, description="Restaurant description")
-    cuisine_types: List[str] = Field(default_factory=list, description="List of cuisine types")
     vegan_status: Optional[str] = Field(None, description="Fully vegan, vegan options, etc.")
     
     # Location
     address: Optional[str] = Field(None, description="Full street address")
-    city: str = Field(..., description="City name")
-    state: Optional[str] = Field(None, description="State/Province")
-    country: Optional[str] = Field(None, description="Country")
+    city_name: str = Field(..., description="City name") # Match DB field name
+    state: Optional[str] = Field(None, description="State/Province") # Match DB field name
+    country: Optional[str] = Field(None, description="Country") # Match DB field name
     latitude: Optional[float] = Field(None, description="Latitude coordinate")
     longitude: Optional[float] = Field(None, description="Longitude coordinate")
     
@@ -61,6 +61,10 @@ class RestaurantDetail(BaseModel):
     price_range: Optional[str] = Field(None, description="Price range indicator")
     features: List[str] = Field(default_factory=list, description="Features like delivery, outdoor seating")
     
+    # Cuisine (using both fields to match DB)
+    cuisine_types: List[str] = Field(default_factory=list, description="List of cuisine types")
+    cuisine_tags: List[str] = Field(default_factory=list, description="Cuisine tags (legacy)")
+    
     # Reviews & Ratings
     rating: Optional[float] = Field(None, description="Average rating 0-5")
     review_count: Optional[int] = Field(None, description="Number of reviews")
@@ -69,7 +73,14 @@ class RestaurantDetail(BaseModel):
     # Meta
     happycow_url: str = Field(..., description="Full HappyCow URL")
     happycow_id: Optional[str] = Field(None, description="HappyCow venue ID")
+    venue_id: Optional[str] = Field(None, description="Venue ID from scraping")
     last_updated: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    
+    # Additional DB fields for compatibility
+    city_path: Optional[str] = Field(None, description="City path for URL generation")
+    state_name: Optional[str] = Field(None, description="State name (legacy)")
+    country_code: Optional[str] = Field("US", description="Country code")
+    type: Optional[str] = Field(None, description="Restaurant type (legacy)")  # Maps to vegan_status
 
 @dataclass
 class StealthConfig:
@@ -236,7 +247,10 @@ class HappyCowScraper:
                 listing = RestaurantListing(
                     name=item['name'],
                     url=item['url'],
-                    city=city_name
+                    city=city_name,
+                    listing_type=None,  # Will be determined from individual page
+                    is_featured=False,  # Default value
+                    is_new=False       # Default value
                 )
                 listings.append(listing)
             except Exception as e:
@@ -251,32 +265,8 @@ class HappyCowScraper:
             result = self.supabase.table('restaurants').select('id').eq('happycow_url', happycow_url).execute()
             return len(result.data) > 0
         except Exception as e:
-            logger.warning(f"Error checking existing restaurant: {e}")
+            logger.error(f"Error checking existing restaurant: {e}")
             return False
-
-    async def scrape_restaurant_detail(self, listing: RestaurantListing) -> Optional[RestaurantDetail]:
-        """Scrape detailed restaurant information"""
-        if await self.check_existing_restaurant(listing.url):
-            logger.info(f"⏭️  Skipping existing restaurant: {listing.name}")
-            return None
-        
-        try:
-            restaurant = RestaurantDetail(
-                name=listing.name,
-                city=listing.city,
-                state="Texas",  # TODO: Extract from city mapping
-                country="USA",
-                happycow_url=listing.url,
-                vegan_status=listing.listing_type or "veg-friendly",
-                last_updated=datetime.now(timezone.utc)
-            )
-            
-            logger.info(f"✅ Scraped details for {listing.name}")
-            return restaurant
-                
-        except Exception as e:
-            logger.error(f"Exception scraping detail for {listing.name}: {e}")
-            return None
 
     async def save_to_supabase(self, restaurant: RestaurantDetail) -> bool:
         """Save restaurant data to Supabase"""
@@ -285,10 +275,10 @@ class HappyCowScraper:
             
             db_data = {
                 'name': data['name'],
-                'city_name': data['city'],
+                'city_name': data['city_name'],
                 'state_name': data.get('state', 'Unknown'),
                 'country_code': data.get('country', 'US'),
-                'city_path': self._get_city_path(data['city']),
+                'city_path': self._get_city_path(data['city_name']),
                 'happycow_url': data['happycow_url'],
                 'vegan_status': data.get('vegan_status'),
                 'description': data.get('description'),
@@ -341,7 +331,7 @@ class HappyCowScraper:
         for i, listing in enumerate(listings):
             logger.info(f"[{i + 1}/{len(listings)}] Processing: {listing.name}")
             
-            restaurant = await self.scrape_restaurant_detail(listing)
+            restaurant = await self.scrape_individual_restaurant(listing)
             if restaurant is None:
                 skipped_count += 1
                 continue
@@ -423,4 +413,231 @@ class HappyCowScraper:
         reading_time = random.uniform(0.5, 2.0)
         total_delay = base_delay + reading_time
         
-        await asyncio.sleep(total_delay) 
+        await asyncio.sleep(total_delay)
+
+    async def scrape_individual_restaurant(self, listing: RestaurantListing) -> Optional[RestaurantDetail]:
+        """Scrape detailed information from an individual restaurant page"""
+        # Check if restaurant already exists in database
+        if await self.check_existing_restaurant(f"https://www.happycow.net{listing.url}"):
+            logger.info(f"⏭️  Skipping existing restaurant: {listing.name}")
+            return None
+            
+        restaurant_url = f"https://www.happycow.net{listing.url}"
+        logger.info(f"🍽️  Scraping individual restaurant: {listing.name}")
+        
+        # Enhanced human delay before individual page requests
+        await self.enhanced_human_delay()
+        
+        config = CrawlerRunConfig(
+            cache_mode=CacheMode.BYPASS,
+            page_timeout=30000,
+            delay_before_return_html=3.0
+        )
+        
+        try:
+            result = await self.crawler.arun(url=restaurant_url, config=config)
+            
+            if not result.success:
+                logger.error(f"Failed to crawl restaurant page: {restaurant_url}")
+                return None
+            
+            logger.info(f"Fetched restaurant page: {len(result.html)} chars")
+            
+            # Check for blocking indicators
+            if self.detect_blocking_in_content(result.html):
+                logger.warning(f"🚫 Blocking detected on restaurant page: {restaurant_url}")
+                await self.exponential_backoff()
+                return None
+            
+            # Extract detailed restaurant data using CSS selectors (primary strategy)
+            restaurant_data = await self.extract_restaurant_details_css(result.html, listing)
+            
+            if not restaurant_data:
+                # Fallback to regex extraction
+                logger.info(f"CSS extraction failed, trying regex fallback for {listing.name}")
+                restaurant_data = await self.extract_restaurant_details_regex(result.html, listing)
+            
+            if not restaurant_data:
+                logger.warning(f"Failed to extract details for {listing.name}")
+                return None
+            
+            return restaurant_data
+            
+        except Exception as e:
+            logger.error(f"Error scraping restaurant {listing.name}: {e}")
+            return None
+
+    async def extract_restaurant_details_css(self, html_content: str, listing: RestaurantListing) -> Optional[RestaurantDetail]:
+        """Extract restaurant details using CSS selectors (primary strategy)"""
+        from bs4 import BeautifulSoup
+        
+        try:
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Initialize with basic data from listing
+            data = {
+                'name': listing.name,
+                'city_name': listing.city,
+                'happycow_url': f"https://www.happycow.net{listing.url}",
+                'vegan_status': listing.listing_type or 'veg-friendly',
+                'last_updated': datetime.now(timezone.utc)
+            }
+            
+            # Extract detailed information using CSS selectors
+            # These selectors are based on HappyCow's typical page structure
+            
+            # Description
+            desc_elem = soup.select_one('.venue-summary, .description, .venue-description')
+            if desc_elem:
+                data['description'] = desc_elem.get_text(strip=True)
+            
+            # Address
+            address_elem = soup.select_one('.address, .venue-address, .location-address')
+            if address_elem:
+                data['address'] = address_elem.get_text(strip=True)
+            
+            # Phone
+            phone_elem = soup.select_one('.phone, .venue-phone, a[href^=\"tel:\"]')
+            if phone_elem:
+                data['phone'] = phone_elem.get_text(strip=True)
+            
+            # Website
+            website_elem = soup.select_one('.website, .venue-website, a[href^=\"http\"]')
+            if website_elem and website_elem.get('href'):
+                data['website'] = website_elem.get('href')
+            
+            # Rating
+            rating_elem = soup.select_one('.rating, .venue-rating, .stars')
+            if rating_elem:
+                rating_text = rating_elem.get_text(strip=True)
+                # Extract numeric rating (e.g., "4.5" from "4.5 stars")
+                import re
+                rating_match = re.search(r'(\d+\.?\d*)', rating_text)
+                if rating_match:
+                    data['rating'] = float(rating_match.group(1))
+            
+            # Review count
+            review_elem = soup.select_one('.review-count, .reviews-count, .venue-reviews')
+            if review_elem:
+                review_text = review_elem.get_text(strip=True)
+                review_match = re.search(r'(\d+)', review_text)
+                if review_match:
+                    data['review_count'] = int(review_match.group(1))
+            
+            # Cuisine types
+            cuisine_elems = soup.select('.cuisine, .cuisine-tag, .category')
+            if cuisine_elems:
+                data['cuisine_types'] = [elem.get_text(strip=True) for elem in cuisine_elems]
+            
+            # Price range
+            price_elem = soup.select_one('.price, .price-range, .venue-price')
+            if price_elem:
+                price_text = price_elem.get_text(strip=True)
+                # Normalize price indicators
+                if '$$$' in price_text:
+                    data['price_range'] = '$$$'
+                elif '$$' in price_text:
+                    data['price_range'] = '$$'
+                elif '$' in price_text:
+                    data['price_range'] = '$'
+            
+            # Hours (this would need more complex parsing)
+            hours_elem = soup.select_one('.hours, .opening-hours, .venue-hours')
+            if hours_elem:
+                # For now, store as text - could be enhanced to parse into structured format
+                data['hours'] = {'raw': hours_elem.get_text(strip=True)}
+            
+            # Social media
+            instagram_elem = soup.select_one('a[href*=\"instagram.com\"]')
+            if instagram_elem:
+                data['instagram'] = instagram_elem.get('href')
+            
+            facebook_elem = soup.select_one('a[href*=\"facebook.com\"]')
+            if facebook_elem:
+                data['facebook'] = facebook_elem.get('href')
+            
+            # Extract HappyCow ID from URL
+            id_match = re.search(r'/reviews/(\d+)', listing.url)
+            if id_match:
+                data['happycow_id'] = id_match.group(1)
+            
+            # Set default values for missing fields
+            defaults = {
+                'state': 'Unknown',
+                'country': 'USA',
+                'country_code': 'US',
+                'cuisine_tags': data.get('cuisine_types', []),
+                'features': [],
+                'recent_reviews': []
+            }
+            
+            for key, value in defaults.items():
+                if key not in data:
+                    data[key] = value
+            
+            return RestaurantDetail(**data)
+            
+        except Exception as e:
+            logger.error(f"CSS extraction error for {listing.name}: {e}")
+            return None
+
+    async def extract_restaurant_details_regex(self, html_content: str, listing: RestaurantListing) -> Optional[RestaurantDetail]:
+        """Extract restaurant details using regex patterns (fallback strategy)"""
+        import re
+        
+        try:
+            # Initialize with basic data
+            data = {
+                'name': listing.name,
+                'city_name': listing.city,
+                'happycow_url': f"https://www.happycow.net{listing.url}",
+                'vegan_status': listing.listing_type or 'veg-friendly',
+                'last_updated': datetime.now(timezone.utc)
+            }
+            
+            # Regex patterns for common data extraction
+            patterns = {
+                'phone': r'(?:tel:|phone[:\s]*)([\+\d\s\-\(\)\.]+)',
+                'rating': r'(?:rating|stars?)[:\s]*(\d+\.?\d*)',
+                'address': r'(?:address|location)[:\s]*([^<>\n]+)',
+                'website': r'(?:website|url)[:\s]*(?:href=["\']?)?(https?://[^\s"\'<>]+)',
+                'description': r'(?:description|summary)[:\s]*([^<>\n]{20,200})'
+            }
+            
+            for field, pattern in patterns.items():
+                match = re.search(pattern, html_content, re.IGNORECASE)
+                if match:
+                    value = match.group(1).strip()
+                    if field == 'rating':
+                        try:
+                            data[field] = float(value)
+                        except ValueError:
+                            pass
+                    else:
+                        data[field] = value
+            
+            # Extract HappyCow ID
+            id_match = re.search(r'/reviews/(\d+)', listing.url)
+            if id_match:
+                data['happycow_id'] = id_match.group(1)
+            
+            # Set defaults
+            defaults = {
+                'state': 'Unknown',
+                'country': 'USA',
+                'country_code': 'US',
+                'cuisine_types': [],
+                'cuisine_tags': [],
+                'features': [],
+                'recent_reviews': []
+            }
+            
+            for key, value in defaults.items():
+                if key not in data:
+                    data[key] = value
+            
+            return RestaurantDetail(**data)
+            
+        except Exception as e:
+            logger.error(f"Regex extraction error for {listing.name}: {e}")
+            return None 

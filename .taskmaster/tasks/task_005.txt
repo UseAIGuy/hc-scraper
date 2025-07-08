@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Regex Fallback Extraction
+# Status: pending
+# Dependencies: 4 (Not found)
+# Priority: medium
+# Description: Implement regex-based extraction as fallback when CSS selectors fail
+# Details:
+Create regex patterns for extracting data from HTML when structured selectors aren't available.
+
+# Test Strategy:
+Test fallback triggers and extraction accuracy

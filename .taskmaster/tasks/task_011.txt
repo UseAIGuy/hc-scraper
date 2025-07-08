@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Configuration Options for Individual Page Scraping
+# Status: pending
+# Dependencies: 3 (Not found)
+# Priority: low
+# Description: Add configuration options to control individual page scraping behavior
+# Details:
+Add config options for enabling/disabling individual scraping, concurrency limits, data freshness thresholds.
+
+# Test Strategy:
+Test all configuration combinations and edge cases

@@ -1,0 +1,171 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Enhance RestaurantDetail Data Model",
+        "description": "Expand the RestaurantDetail Pydantic model to include comprehensive fields for individual restaurant page data",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [],
+        "details": "Add fields for address, phone, website, social media, hours, ratings, reviews, cuisine types, features, and metadata. Ensure proper validation and optional field handling.",
+        "testStrategy": "Unit tests for model validation with various data combinations",
+        "subtasks": []
+      },
+      {
+        "id": "2",
+        "title": "Update Database Schema",
+        "description": "Add new columns to restaurants table for enhanced data fields",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Create Supabase migration to add columns for all new RestaurantDetail fields. Ensure proper data types and constraints.",
+        "testStrategy": "Test migration rollback and data integrity",
+        "subtasks": []
+      },
+      {
+        "id": "3",
+        "title": "Implement Individual Page Scraping Engine",
+        "description": "Create core logic to visit and scrape individual restaurant detail pages",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Build async function to visit restaurant URLs, handle page loading, and coordinate extraction strategies.",
+        "testStrategy": "Test with sample restaurant URLs and various page layouts",
+        "subtasks": []
+      },
+      {
+        "id": "4",
+        "title": "CSS Selector-Based Data Extraction",
+        "description": "Implement primary extraction strategy using CSS selectors for common page elements",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Map HappyCow page structure to CSS selectors for extracting address, phone, hours, ratings, etc.",
+        "testStrategy": "Test extraction accuracy across multiple restaurant pages",
+        "subtasks": []
+      },
+      {
+        "id": "5",
+        "title": "Regex Fallback Extraction",
+        "description": "Implement regex-based extraction as fallback when CSS selectors fail",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "4"
+        ],
+        "details": "Create regex patterns for extracting data from HTML when structured selectors aren't available.",
+        "testStrategy": "Test fallback triggers and extraction accuracy",
+        "subtasks": []
+      },
+      {
+        "id": "6",
+        "title": "LLM-Based Complex Extraction",
+        "description": "Implement LLM extraction for complex cases where structured methods fail",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "5"
+        ],
+        "details": "Use Ollama/LLM to extract data from complex or non-standard page layouts as final fallback.",
+        "testStrategy": "Test LLM accuracy and performance on edge cases",
+        "subtasks": []
+      },
+      {
+        "id": "7",
+        "title": "Enhanced Caching and Duplicate Detection",
+        "description": "Implement intelligent caching to avoid re-scraping detailed restaurant data",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "details": "Check database for existing detailed records, implement data freshness logic, and skip re-processing when appropriate.",
+        "testStrategy": "Test cache hit/miss scenarios and data staleness detection",
+        "subtasks": []
+      },
+      {
+        "id": "8",
+        "title": "Individual Page Error Handling and Retry Logic",
+        "description": "Implement robust error handling for individual page failures",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Handle HTTP errors, timeouts, parsing failures with retry logic and partial data saving.",
+        "testStrategy": "Test various failure scenarios and recovery mechanisms",
+        "subtasks": []
+      },
+      {
+        "id": "9",
+        "title": "Enhanced Rate Limiting for Individual Pages",
+        "description": "Adapt anti-detection measures for increased request volume from individual page scraping",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Implement adaptive delays, enhanced blocking detection, and graceful degradation for individual page requests.",
+        "testStrategy": "Test rate limiting behavior under various load conditions",
+        "subtasks": []
+      },
+      {
+        "id": "10",
+        "title": "Progress Tracking and Monitoring",
+        "description": "Implement detailed progress tracking for individual restaurant processing",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Track individual restaurant processing status, success rates, and provide detailed logging for monitoring.",
+        "testStrategy": "Test progress reporting accuracy and performance impact",
+        "subtasks": []
+      },
+      {
+        "id": "11",
+        "title": "Configuration Options for Individual Page Scraping",
+        "description": "Add configuration options to control individual page scraping behavior",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Add config options for enabling/disabling individual scraping, concurrency limits, data freshness thresholds.",
+        "testStrategy": "Test all configuration combinations and edge cases",
+        "subtasks": []
+      },
+      {
+        "id": "12",
+        "title": "End-to-End Testing and Performance Optimization",
+        "description": "Comprehensive testing and optimization of the complete individual page scraping system",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "details": "Test complete workflow with multiple cities, benchmark performance, optimize bottlenecks, and validate data quality.",
+        "testStrategy": "Full integration tests with performance benchmarks and data validation",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-01-07T23:00:00Z",
+      "updated": "2025-01-07T23:00:00Z",
+      "version": "1.0",
+      "project": "HappyCow Individual Restaurant Page Scraping"
+    }
+  }
+}

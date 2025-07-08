@@ -1,0 +1,163 @@
+# HappyCow Individual Restaurant Page Scraping - PRD
+
+## Overview
+Enhance the existing HappyCow scraper to visit individual restaurant pages and extract comprehensive restaurant details instead of just basic listing information from city pages.
+
+## Current State
+- ✅ Queue-based city processing working
+- ✅ Basic restaurant extraction from city listing pages (name + URL only)
+- ✅ Anti-detection measures implemented
+- ✅ Resume capability and duplicate detection
+- ❌ **Missing**: Individual restaurant page scraping for detailed data
+
+## Problem Statement
+The current scraper only extracts minimal data (restaurant name and URL) from city listing pages. For a useful restaurant directory like Vegan Voyager, we need comprehensive restaurant details including:
+- Full address and location data
+- Contact information (phone, website, social media)
+- Operating hours and business information
+- Ratings, reviews, and user-generated content
+- Restaurant features and cuisine types
+- Pricing and accessibility information
+
+## Goals
+1. **Rich Data Collection**: Extract comprehensive restaurant details from individual pages
+2. **Performance Optimization**: Efficiently handle increased page requests (49+ per city)
+3. **Robust Error Handling**: Handle individual page failures gracefully
+4. **Rate Limiting Compliance**: Maintain anti-detection while increasing request volume
+5. **Data Quality**: Ensure extracted data is accurate and properly structured
+
+## Success Criteria
+- Extract 15+ data fields per restaurant (vs current 3)
+- Maintain <5% failure rate on individual page scraping
+- Keep average processing time under 10 seconds per restaurant
+- Successfully handle cities with 500+ restaurants
+- Preserve all existing queue-based functionality
+
+## Technical Requirements
+
+### Core Features
+1. **Individual Page Scraping Engine**
+   - Visit each restaurant's detail page
+   - Extract structured data using multiple strategies (regex, CSS selectors, LLM)
+   - Handle different page layouts and missing data gracefully
+
+2. **Enhanced Data Model**
+   - Expand RestaurantDetail model with all available fields
+   - Proper data validation and type conversion
+   - Handle optional/missing fields appropriately
+
+3. **Performance Optimization**
+   - Intelligent caching to avoid re-scraping existing restaurants
+   - Configurable concurrency for individual page requests
+   - Batch processing with progress tracking
+
+4. **Error Recovery**
+   - Retry logic for failed individual pages
+   - Partial success handling (save what we can extract)
+   - Detailed logging for debugging extraction issues
+
+5. **Rate Limiting Enhancement**
+   - Adaptive delays based on response times
+   - Enhanced blocking detection for individual pages
+   - Graceful degradation when rate limited
+
+### Data Fields to Extract
+**Location & Contact:**
+- Full street address
+- Latitude/longitude coordinates
+- Phone number
+- Official website URL
+- Social media links (Instagram, Facebook)
+
+**Business Information:**
+- Operating hours (by day of week)
+- Price range indicator
+- Cuisine types and categories
+- Restaurant features (delivery, outdoor seating, etc.)
+- Accessibility information
+
+**Reviews & Ratings:**
+- Average rating score
+- Total review count
+- Recent review excerpts
+- User-uploaded photos count
+
+**Metadata:**
+- HappyCow venue ID
+- Last menu update date
+- Restaurant description/bio
+- Special dietary options
+
+### Technical Architecture
+1. **Modular Extraction System**
+   - Primary: CSS selector-based extraction
+   - Fallback: Regex pattern matching
+   - Final fallback: LLM-based extraction for complex cases
+
+2. **Caching Strategy**
+   - Check database for existing detailed records
+   - Skip re-scraping unless data is stale (configurable age)
+   - Cache extraction patterns for performance
+
+3. **Progress Tracking**
+   - Individual restaurant processing status
+   - City-level completion percentages
+   - Detailed error reporting and retry counts
+
+4. **Configuration Options**
+   - Enable/disable individual page scraping
+   - Concurrency limits for detail pages
+   - Data freshness thresholds
+   - Extraction strategy preferences
+
+## Implementation Phases
+
+### Phase 1: Core Infrastructure
+- Enhance RestaurantDetail model with all fields
+- Implement individual page visiting logic
+- Basic data extraction using CSS selectors
+- Update database schema for new fields
+
+### Phase 2: Extraction Engine
+- Implement multi-strategy extraction (CSS → Regex → LLM)
+- Add comprehensive error handling
+- Implement caching and duplicate detection
+- Performance optimization for batch processing
+
+### Phase 3: Advanced Features
+- Enhanced rate limiting and anti-detection
+- Progress tracking and resumption
+- Data validation and quality checks
+- Comprehensive logging and monitoring
+
+### Phase 4: Testing & Optimization
+- End-to-end testing with multiple cities
+- Performance benchmarking and optimization
+- Error rate analysis and improvements
+- Documentation and deployment guides
+
+## Risks & Mitigation
+1. **Increased Rate Limiting Risk**
+   - Mitigation: Enhanced delays, better detection, graceful fallbacks
+
+2. **Performance Degradation**
+   - Mitigation: Intelligent caching, optimized concurrency, progress tracking
+
+3. **Data Quality Issues**
+   - Mitigation: Multi-strategy extraction, validation, manual review tools
+
+4. **Complex Page Layouts**
+   - Mitigation: Flexible extraction patterns, LLM fallbacks, regular updates
+
+## Success Metrics
+- **Data Completeness**: >80% of restaurants have address, phone, hours
+- **Processing Speed**: <8 seconds average per restaurant
+- **Error Rate**: <5% individual page failures
+- **Coverage**: Successfully process cities with 500+ restaurants
+- **Quality**: >95% accuracy on extracted structured data
+
+## Dependencies
+- Existing queue-based scraper infrastructure
+- Supabase database with enhanced schema
+- Anti-detection and rate limiting systems
+- LLM integration for complex extraction cases 
