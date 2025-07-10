@@ -1,0 +1,175 @@
+# HappyCow Scraper: Multi-Page Type Crawling Fix PRD
+
+## Problem Statement
+
+The HappyCow scraper successfully crawls city listing pages but fails completely when attempting to crawl individual restaurant pages. Analysis reveals that the scraper uses a one-size-fits-all approach with city listing CSS selectors for ALL page types, causing crawl4ai to timeout waiting for elements that don't exist on restaurant pages.
+
+**Current Issues:**
+- ✅ City listing pages work (e.g., `/north_america/usa/texas/dallas/`)
+- ❌ Individual restaurant pages fail (e.g., `/reviews/restaurant-name-123/`)
+- ❌ Using wrong CSS selectors: `.card-listing, .venue-list-item` on restaurant pages
+- ❌ crawl4ai returns `Success: False` for all restaurant pages
+- ❌ No page type detection or conditional crawling logic
+
+## Success Criteria
+
+### Primary Success Criteria
+1. **City Listing Pages**: Continue to work as they currently do
+   - Successfully fetch HTML content (800K+ characters)
+   - Find restaurant listings using appropriate selectors
+   - Extract restaurant URLs for individual scraping
+
+2. **Individual Restaurant Pages**: Successfully crawl and extract data
+   - crawl4ai returns `Success: True` for restaurant pages
+   - Extract restaurant details (name, address, phone, reviews, etc.)
+   - Handle restaurant-specific page structure and selectors
+
+3. **Page Type Detection**: Automatically detect page type and use appropriate settings
+   - Detect city listing pages vs individual restaurant pages
+   - Apply correct CSS selectors based on page type
+   - Use appropriate timeout and crawling strategies per page type
+
+### Technical Success Criteria
+- **Zero Breaking Changes**: Existing city listing functionality remains intact
+- **Performance**: Restaurant page crawling completes within 30 seconds per page
+- **Reliability**: 95%+ success rate for both page types under normal conditions
+- **Error Handling**: Clear error messages distinguishing page type vs crawling failures
+
+## Failure Criteria
+
+### Immediate Failure Criteria
+- Any regression in city listing page crawling functionality
+- Restaurant pages still returning `Success: False` after implementation
+- Performance degradation beyond 50% for city listing pages
+
+### Operational Failure Criteria
+- More than 5% failure rate for restaurant pages under normal conditions
+- Memory leaks or resource exhaustion during crawling
+- Silent failures without proper error reporting
+
+## Technical Requirements
+
+### Page Type Detection
+- **URL Pattern Recognition**: Detect page type based on URL patterns
+  - City pages: `/north_america/usa/state/city/` or similar geographic patterns
+  - Restaurant pages: `/reviews/restaurant-name-id/` or `/reviews/restaurant-name-id/update`
+  - Handle edge cases and variations in URL structure
+
+### CSS Selector Strategy
+- **City Listing Pages**: 
+  - Primary selectors: `.card-listing, .venue-list-item`
+  - Fallback selectors: `.venue-item, .restaurant-item`
+  - Error detection: `.no-results, .captcha`
+
+- **Restaurant Pages**:
+  - Primary selectors: `.restaurant-name, .venue-details, h1`
+  - Content selectors: `.review-content, .venue-info, .contact-info`
+  - Error detection: `.not-found, .error-message`
+
+### Crawl4AI Configuration
+- **Conditional Configuration**: Different crawl4ai settings per page type
+- **Timeout Management**: Appropriate timeouts for each page type
+- **Wait Strategies**: Page-specific wait conditions and selectors
+- **Error Recovery**: Retry logic with different selectors if initial attempt fails
+
+## Implementation Strategy
+
+### Phase 1: Page Type Detection
+- Create page type detection utility
+- Implement URL pattern matching
+- Add comprehensive test coverage for URL classification
+
+### Phase 2: Conditional Crawling Logic
+- Refactor scraper to use page-type-specific configurations
+- Implement separate crawl4ai configs for city vs restaurant pages
+- Add fallback selector strategies
+
+### Phase 3: Testing & Validation
+- Test with known working city pages (regression testing)
+- Test with failing restaurant pages (new functionality)
+- Performance benchmarking and optimization
+
+### Phase 4: Error Handling & Monitoring
+- Enhanced error reporting with page type context
+- Logging improvements for debugging page-specific issues
+- Monitoring and alerting for page type detection accuracy
+
+## Test Cases
+
+### City Listing Page Tests
+- Dallas, Texas listing page
+- Los Angeles, California listing page
+- Empty city pages (no restaurants)
+- Pages with pagination
+
+### Restaurant Page Tests
+- Standard restaurant pages with full details
+- Restaurant update pages (`/update` suffix)
+- Restaurants with missing information
+- Restaurants with extensive reviews
+
+### Edge Case Tests
+- Malformed URLs
+- Redirected pages
+- Rate-limited responses
+- Network timeout scenarios
+
+## Dependencies
+
+### Technical Dependencies
+- Existing crawl4ai infrastructure
+- Current CSS selector knowledge base
+- URL routing and pattern matching utilities
+- Error handling and logging framework
+
+### Testing Dependencies
+- Access to HappyCow test URLs
+- Performance benchmarking tools
+- Regression testing suite for city listings
+
+## Risks & Mitigation
+
+### High Risk: Breaking Existing Functionality
+- **Mitigation**: Comprehensive regression testing before deployment
+- **Mitigation**: Feature flags for gradual rollout
+- **Mitigation**: Rollback plan with previous working configuration
+
+### Medium Risk: Page Type Detection Accuracy
+- **Mitigation**: Extensive URL pattern testing
+- **Mitigation**: Fallback to generic selectors if detection fails
+- **Mitigation**: Manual override capability for edge cases
+
+### Low Risk: Performance Impact
+- **Mitigation**: Performance benchmarking during development
+- **Mitigation**: Caching of page type detection results
+- **Mitigation**: Timeout optimization per page type
+
+## Acceptance Testing
+
+### Automated Tests
+- Unit tests for page type detection (100% coverage)
+- Integration tests for both page types
+- Performance tests for crawling speed
+- Error handling tests for failure scenarios
+
+### Manual Testing
+- Visual verification of restaurant page content extraction
+- End-to-end testing with queue-based scraping
+- User acceptance testing with real-world URLs
+
+## Deployment Plan
+
+### Pre-Deployment
+- Code review focusing on backward compatibility
+- Performance testing in staging environment
+- Documentation updates for new page type handling
+
+### Deployment
+- Feature flag enabled deployment
+- Gradual rollout starting with test restaurants
+- Monitoring of success/failure rates per page type
+
+### Post-Deployment
+- 24-hour monitoring of both page types
+- Performance metrics collection
+- User feedback collection and issue resolution 

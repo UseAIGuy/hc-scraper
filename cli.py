@@ -2,20 +2,32 @@
 """
 Command-line interface for HappyCow scraper
 """
-import argparse
 import asyncio
-import logging
-from typing import List, Dict, Optional
+import argparse
 import sys
-from config import ScrapingConfig, load_config
-from scraper import HappyCowScraper
-from queue_manager import QueueManager, CityTask
+import os
+import logging
+from typing import Optional, Dict, Any
+from supabase import create_client
+from dotenv import load_dotenv
 
-# Set up logging
+# Add project root to path for imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from scraper import HappyCowScraper
+from config import load_config, ScrapingConfig
+from queue_manager import QueueManager
+
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('scraper.log'),
+        logging.StreamHandler()
+    ]
 )
+
 logger = logging.getLogger(__name__)
 
 def parse_arguments():
@@ -41,6 +53,14 @@ def parse_arguments():
     parser.add_argument("--max-pages", type=int, help="Max pages per city")
     parser.add_argument("--workers", type=int, default=3, help="Number of concurrent workers")
     parser.add_argument("--start-page", type=int, default=1, help="Page to start from (manual cities only)")
+    
+    # Delay and rate limiting
+    parser.add_argument("--delay-min", type=float, default=2.0, help="Minimum delay between requests (seconds)")
+    parser.add_argument("--delay-max", type=float, default=6.0, help="Maximum delay between requests (seconds)")
+    parser.add_argument("--anti-captcha", action="store_true", help="Use extra conservative delays to avoid CAPTCHA")
+    parser.add_argument("--proxy", type=str, help="Use specific proxy (http://proxy:port or socks5://proxy:port)")
+    parser.add_argument("--rotate-session", action="store_true", help="Create new browser session for each city")
+    parser.add_argument("--fresh-start", action="store_true", help="Clear any cached browser state and start fresh")
     
     return parser.parse_args()
 
@@ -118,8 +138,9 @@ async def scrape_from_queue(config: ScrapingConfig, args):
                 # Scrape the city using the proper path from database
                 result = await scraper.scrape_city_complete(
                     city_task.city,
-                    max_restaurants=config.max_restaurants_per_city if config.test_mode else None,
-                    city_path=city_path  # Use the extracted path from URL
+                    max_restaurants=args.max_restaurants,  # Use args.max_restaurants directly
+                    city_path=city_path,  # Use the extracted path from URL
+                    city_task=city_task   # 🔧 PASS CITY TASK DATA FOR STATE/FULL_PATH
                 )
                 
                 restaurants_scraped = len(result.get('restaurants', []))
@@ -147,16 +168,41 @@ async def scrape_from_queue(config: ScrapingConfig, args):
 
 async def scrape_manual_cities(config: ScrapingConfig, args):
     """Scrape manually specified cities"""
+    # Apply anti-captcha mode if requested
+    min_delay = args.delay_min
+    max_delay = args.delay_max
+    workers = args.workers
+    
+    if args.anti_captcha:
+        min_delay = max(min_delay, 10.0)  # At least 10 seconds
+        max_delay = max(max_delay, 25.0)  # At least 25 seconds
+        workers = 1  # Single worker only
+        print("🛡️  Anti-CAPTCHA mode enabled: Using conservative delays and single worker")
+    
+    # Determine proxy to use
+    proxy_url = None
+    if args.proxy:
+        proxy_url = args.proxy
+        print(f"🌐 Using custom proxy: {proxy_url}")
+    elif config.get_decodo_proxy_url():
+        proxy_url = config.get_decodo_proxy_url()
+        print("🌐 Using Decodo proxy service")
+    elif config.custom_proxy:
+        proxy_url = config.custom_proxy
+        print(f"🌐 Using configured proxy: {config.custom_proxy}")
+    
     async with HappyCowScraper(
         supabase_url=config.supabase_url,
         supabase_key=config.supabase_key,
-        max_workers=config.max_concurrency,
-        min_delay=config.human_delay_range[0],
-        max_delay=config.human_delay_range[1]
+        max_workers=workers,
+        min_delay=min_delay,
+        max_delay=max_delay,
+        proxy_url=proxy_url
     ) as scraper:
         
-        # Parse cities
+        # Parse cities - use comma separation, supports full_path format (e.g., dallas_texas)
         cities = {}
+        
         for city_name in args.cities.split(','):
             # Clean up city name - remove quotes, backslashes, and extra whitespace
             city_name = city_name.strip().strip('"').strip("'").strip('\\').strip()
@@ -171,9 +217,36 @@ async def scrape_manual_cities(config: ScrapingConfig, args):
             print(f"\n📍 Processing: {city_name}")
             
             try:
+                # Look up city data from database for manual cities
+                city_task = None
+                try:
+                    # Try to find city data in database using full_path
+                    city_path = scraper._get_city_path(city_name)
+                    
+                    # Create a mock city_task object with database data
+                    supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_KEY'))
+                    result_data = supabase.table('city_queue').select('url, city, state, full_path').eq('full_path', city_name).execute()
+                    
+                    if result_data.data:
+                        city_data = result_data.data[0]
+                        # Create a simple object with the needed attributes
+                        class CityTask:
+                            def __init__(self, data):
+                                self.city = data['city']
+                                self.state = data['state'] 
+                                self.full_path = data['full_path']
+                                self.url = data['url']
+                        
+                        city_task = CityTask(city_data)
+                        print(f"🗺️  Found city data: {city_task.city}, {city_task.state}")
+                    
+                except Exception as e:
+                    print(f"⚠️  Could not lookup city data for {city_name}: {e}")
+                
                 result = await scraper.scrape_city_complete(
                     city_name, 
-                    max_restaurants=config.max_restaurants_per_city if config.test_mode else None
+                    max_restaurants=args.max_restaurants,  # Use args.max_restaurants directly
+                    city_task=city_task  # Pass the city task data
                 )
                 
                 if result.get('success', False):

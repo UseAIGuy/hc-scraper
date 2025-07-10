@@ -1,0 +1,2744 @@
+[
+  {
+    "url": "html_analysis\\sample_2.html",
+    "title": "CLOSED: Vegetarian in the Golden Age - Vientiane  Restaurant - HappyCow",
+    "meta_tags": {
+      "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "og:title": "CLOSED: Vegetarian in the Golden Age - Vientiane  Restaurant - HappyCow",
+      "og:type": "article",
+      "og:url": "https://www.happycow.net/reviews/vegetarian-in-the-golden-age-vientiane-27816",
+      "og:image": "https://images.happycow.net/venues/500/27/81/hcmp27816_1672879.jpeg",
+      "og:image:width": "500",
+      "og:image:height": "667",
+      "fb:app_id": "202351993123002",
+      "msapplication-TileColor": "#603cba",
+      "theme-color": "#ffffff",
+      "description": "Reviews of vegetarian restaurant Vegetarian in the Golden Age in Vientiane, Laos 'Went there to get some take away. It was early morning so no buffet. So I ordered and waited 10min. It was tasty! Also i really love tofu snacks in vacuum'",
+      "og:description": "Reviews of vegetarian restaurant Vegetarian in the Golden Age in Vientiane, Laos 'Went there to get some take away. It was early morning so no buffet. So I ordered and waited 10min. It was tasty! Also i really love tofu snacks in vacuum'",
+      "keywords": "Vegetarian in the Golden Age, vegetarian, restaurant"
+    },
+    "structured_data": [],
+    "potential_fields": {
+      "name": [
+        {
+          "selector": "h1",
+          "text": "Search HappyCow",
+          "tag": "h1",
+          "classes": [
+            "text-3xl",
+            "leading-tight",
+            "ml-3",
+            "md:ml-5",
+            "sm:pr-3"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "Signup",
+          "tag": "h1",
+          "classes": [
+            "modal-title-step-2",
+            "mb-5",
+            "text-primary-500",
+            "text-2xl",
+            "hidden",
+            "lg:text-center",
+            "lg:mx-auto"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "CLOSED: Vegetarian in the Golden Age",
+          "tag": "h1",
+          "classes": [
+            "header-title",
+            "text-2xl",
+            "leading-normal",
+            "break-words",
+            "md:text-[1.75rem]",
+            "closed"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h2",
+          "text": "Member Account Recovery Request",
+          "tag": "h2",
+          "classes": [
+            "text-2xl",
+            "text-primary-500",
+            "leading-normal",
+            "lg:text-center"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": ".title",
+          "text": "HannahEichler",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/HannahEichler"
+        },
+        {
+          "selector": ".title",
+          "text": "AmericanPhil",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/AmericanPhil"
+        },
+        {
+          "selector": ".title",
+          "text": "JurgaBalciunaite",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/JurgaBalciunaite"
+        },
+        {
+          "selector": ".title",
+          "text": "Patatine",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Patatine"
+        },
+        {
+          "selector": ".title",
+          "text": "sarawagn3r",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/sarawagn3r"
+        },
+        {
+          "selector": ".title",
+          "text": "bukrie",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/bukrie"
+        },
+        {
+          "selector": ".title",
+          "text": "malvina",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/malvina"
+        },
+        {
+          "selector": ".title",
+          "text": "anautrecht",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/anautrecht"
+        },
+        {
+          "selector": ".title",
+          "text": "MKorvesis",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/MKorvesis"
+        },
+        {
+          "selector": ".title",
+          "text": "Tania_SlowerTravels",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Tania_SlowerTravels"
+        },
+        {
+          "selector": ".title",
+          "text": "Annanas3",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Annanas3"
+        },
+        {
+          "selector": ".title",
+          "text": "lokalvegan",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/lokalvegan"
+        },
+        {
+          "selector": ".title",
+          "text": "JunkyardOtter",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/JunkyardOtter"
+        },
+        {
+          "selector": ".title",
+          "text": "MiaCohen",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/MiaCohen"
+        },
+        {
+          "selector": ".title",
+          "text": "BernhardH",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/BernhardH"
+        },
+        {
+          "selector": ".title",
+          "text": "stam",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/stam"
+        },
+        {
+          "selector": ".title",
+          "text": "Here.To.Travel_Jade",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Here.To.Travel_Jade"
+        },
+        {
+          "selector": ".title",
+          "text": "rjaneruns",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/rjaneruns"
+        },
+        {
+          "selector": ".title",
+          "text": "ValentinaCrescini",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/ValentinaCrescini"
+        },
+        {
+          "selector": ".title",
+          "text": "Maurita",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Maurita"
+        },
+        {
+          "selector": ".title",
+          "text": "Falcojan",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Falcojan"
+        },
+        {
+          "selector": ".title",
+          "text": "Potatocakes",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Potatocakes"
+        },
+        {
+          "selector": ".title",
+          "text": "NinjaKatjaHorr",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/NinjaKatjaHorr"
+        },
+        {
+          "selector": ".title",
+          "text": "JuulR",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/JuulR"
+        },
+        {
+          "selector": ".title",
+          "text": "Momo_moon",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Momo_moon"
+        },
+        {
+          "selector": ".title",
+          "text": "13akeel",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/13akeel"
+        },
+        {
+          "selector": ".title",
+          "text": "domenicaabad",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/domenicaabad"
+        },
+        {
+          "selector": ".title",
+          "text": "bruceeeee",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/bruceeeee"
+        },
+        {
+          "selector": ".title",
+          "text": "bernardo",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/bernardo"
+        },
+        {
+          "selector": ".title",
+          "text": "HannahEichler",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/HannahEichler"
+        }
+      ],
+      "address": [
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "0155 Hatxadi, Saylom Road, Chanthabouly District,Vientiane,Laos",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "0155 Hatxadi, Saylom Road, Chanthabouly District,Vientiane,Laos",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "phone": [
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+856-2059697779",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+856-2059697779",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+856-2059697779"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+856-2059697779",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+856-2059697779"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+856-2059697779"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+856-2059697779",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+856-2059697779"
+        }
+      ],
+      "website": [
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "2",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/vegetarian-in-the-golden-age-vientiane-27816?page=2"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "3",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/vegetarian-in-the-golden-age-vientiane-27816?page=3"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Link to this page from your site",
+          "tag": "a",
+          "classes": [
+            "font-normal",
+            "leading-relaxed",
+            "flex",
+            "items-center",
+            "justify-between",
+            "group",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/vegetarian-in-the-golden-age-vientiane-27816/link"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "View More",
+          "tag": "a",
+          "classes": [
+            "text-sm",
+            "font-normal",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/blog"
+        }
+      ],
+      "rating": [],
+      "reviews": [
+        {
+          "selector": ".reviews",
+          "text": "JurgaBalciunaitePoints +152Vegan28 Oct 2024Good foot- EditWent there to get some take away. It was early morning so no buffet. So I ordered and waited 10min. It was tasty! Also i really love tofu snac",
+          "tag": "div",
+          "classes": [
+            "reviews",
+            "mt-6"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "cuisine": [],
+      "hours": [],
+      "price": [
+        {
+          "selector": "[itemprop=\"priceRange\"]",
+          "text": "https://www.happycow.netAsiaLaosView all Vientiane listingsVientiane115All Photos(115)CLOSED: Vegetarian in the Golden Age(70)45ClosedVegetarianLactoOvoChineseWesternVietnameseVegetarian Buddhist rest",
+          "tag": "meta",
+          "classes": [],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "description": [
+        {
+          "selector": "[itemprop=\"description\"]",
+          "text": "Vegetarian Buddhist restaurant serving Asian and western food with mock meats. Nice and clean. Owners speak basic English and meals are sizable. Buffet served from 11am-2pm daily. The only place outsi",
+          "tag": "p",
+          "classes": [
+            "venue-description",
+            "font-normal",
+            "break-words"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "social_media": []
+    },
+    "css_classes": "{'text-gray-800', 'lg:py-0', 'lg:mt-11', 'favorite-badge', 'item-top', 'ml-10', 'md:mt-6', 'mt-12', 'before:inset-y-0', 'input-control', 'inset-x-0', 'leading-relaxed', 'comment-response', 'md:flex', 'md:block', 'pr-1', 'w-fit', 'mt-4', 'sm:mr-3', 'ml-1.5', 'transform', 'justify-end', 'p-4', 'mb-1', 'md:mb-5', 'xl:border', 'object-cover', 'lg:w-4/12', 'lg:top-0', 'comment-form', 'h-52', 'pagination-control', 'h-6', 'w-2/3', 'fadeIn', 'lg:px-0', 'dialog-default', 'bg-cover', '-mt-0.5', 'md:mt-1', 'pl-3', 'mt-5', 'text-red-500', 'absolute', 'container', 'text-3xl', 'w-1/2', 'empty:hidden', 'tab-pane', 'overflow-y-auto', 'right-0', 'pl-12', 'sm:mb-0', 'hover:opacity-85', 'nav-item-register', 'last:hidden', 'item-video', 'lg:relative', 'lg:ml-12', 'w-24', 'checked:border-primary-100', 'listing-container', 'max-h-100', 'pagination', 'previous', '-mt-[2px]', 'hidden', 'with-errors', 'comment-menu', 'page-content', 'xl:border-primary-500', 'btn-login', 'modal-dialog', 'lg:order-3', 'lg:hidden', 'xl:w-auto', 'ml-0', 'xl:block', 'xl:truncate', 'w-7', 'bg-gray-200', 'lg:grid', 'content-item', 'md:py-2', 'lg:grid-cols-2', 'bg-facebook', 'lg:order-2', 'placeholder-slot', 'favorite-icon', 'lg:pl-8', 'px-9', 'modal-close', 'border-primary-100', 'md:rounded-xl', 'lg:w-2/3', 'border-primary-500', 'left-0', 'md:text-left', 'ml-2', '-ml-0.5', 'xl:mr-2', 'before:absolute', 'btn-toggle-animation', 'lg:h-5', 'w-10', 'scale-90', 'listing-column-left', 'hover:underline', 'md:w-7/12', 'category-', 'my-4', 'checked:bg-primary-100', 'group-hover:text-primary-500', 'lg:gap-6', 'h-4', 'lg:mt-0', 'pt-1', 'query-search-input', 'rounded-xl', 'tranistion-colors', 'flex-col', 'opacity-0', 'rounded', 'lg:-mt-8', 'md:list-item', 'ml-auto', 'mr-6', 'md:ml-3', 'tab-forums', 'control-left', '-mt-1', 'md:inline-flex', 'md:mx-0', 'hover:bg-g-lighted-blue', 'lg:order-1', 'h-3', 'text-xs', 'md:w-3/12', 'min-h-13', 'lg:-mt-1', 'max-w-[400px]', 'relative', 'md:line-clamp-none', 'w-11', 'w-3/12', 'auth-content', 'xl:py-0', 'lg:overflow-hidden', 'group', 'item-center', 'bottom-2', 'text-[13px]', 'nav-item', 'pb-9', 'edit-review', 'sm:h-11', 'md:top-0', 'before:h-screen', 'before:bg-gradient-black', 'my-1', 'md:max-h-[220px]', 'navbar-nav', 'sm:relative', 'comment-item', 'xl:w-[308px]', 'footer-credits', 'placeholder-venue-image', 'nav', 'bg-center', 'z-30', 'title-username', '-ml-1.5', 'max-h-[120px]', 'w-44', '-mr-5', 'w-16', 'focus:outline-none', 'font-normal', 'btn-toggle-box', 'btn-google-placeholder', 'overflow-x-hidden', 'h-9', 'checkbox-custom-primary', 'tab-all', 'lg:pt-6', 'lg:pb-0', 'navbar-mobile-btn', 'md:grid', 'border-primary-200', 'before:z-1', 'lg:w-7/12', 'response', 'justify-center', 'bg-red-500', 'bg-gray-100', 'transition-colors', 'leading-snug', 'lg:bg-white', 'w-6', 'text-base-500', 'px-3', 'space-x-1.5', 'h-7', '-mx-0.5', 'xl:mr-3', 'comment-body', 'nav-right', 'lg:bg-transparent', 'md:mt-4', 'bg-primary-100', 'lg:my-6', 'focus:border-g-light-blue', 'pb-1', '_csrf', 'gallery', 'xl:divide-y', 'comment-body-header', 'xl:ml-[64px]', 'listing-review-images', 'md:space-x-6', 'font-bold', 'bg-gradient-instagram', 'mx-1', 'pt-4', 'flex-col-reverse', 'logged-in', 'md:mr-8', 'gap-2', 'latest-blog-posts', 'inline-flex', 'lg:flex-row', 'map-info-desktop', 'current-location', 'xl:mb-0', 'btn-add-listing', 'py-5', 'text-center', 'limit', '-mt-[3px]', 'text-black', 'data-element', 'z-9', 'xl-open-hover', 'md:pb-0', 'md:flex-wrap', 'btn-fb-login', 'mr-2', 'content-intrinsic-size-300', 'sm:pl-6', 'lg:space-y-px', 'sm:pr-3', 'md:space-y-3', 'w-auto', 'lg:right-0', 'lg:text-center', 'md:mb-4', 'gallery-controls', 'relatvie', 'map-info-widget', 'xl:px-6', 'md:space-y-0', 'btn-search-overlay', 'xl:overflow-hidden', 'my-6', 'before:inset-x-0', 'lg:py-3', 'w-2', 'dropdown-menu', 'pointer-events-none', 'top-0', 'grid', 'md:mr-2', 'space-x-3', 'mt-3', 'mx-1.5', 'flex', 'rounded-l-md', 'search-overlay-results-container', 'md:mt-[84px]', 'sm:py-4', 'xl:text-right', 'lg:w-1/2', 'pagination-link', 'dialog-remember', 'rounded-lg', 'navbar-header', 'pt-3.5', 'lg:mt-6', 'active', 'shadow-none', 'xl:mr-0', 'img-iphone', 'logged-out', 'modal-gallery', 'navbar', 'title', 'md:left-auto', 'flex-nowrap', 'btn-apple-register', 'mb-3.5', 'nav-tabs', 'lg:w-8/12', 'login-facebook', 'transition-all', 'min-h-full', 'navbar-notifications', 'lg:flex-grow-0', 'xl:ml-0', 'border-dashed', 'dropdown-report', 'item-overlay', 'block', 'modal-login-google', 'shadow-sm', 'h-2', 'md:justify-center', 'p-3', 'text-lg', 'xl:px-0', 'mr-1', '-ml-5', 'mt-10', 'lg:w-5/12', 'before:h-20', 'z-1', 'md:-mt-1', 'reviews', 'ml-1', 'sm:max-h-[170px]', 'break-words', 'social-block', 'w-3/5', 'placeholder-base-color', 'border-gray-200', 'lg:h-50', 'leading-7', 'modal-title', 'tab-recipes', 'md:px-5', '-z-1', 'mt-7', 'mb-6', 'navbar-collapse', 'hours-summary', 'venue-last', 'h-3.5', 'mb-5', 'hover:bg-gray-200', 'xl:ml-[60px]', 'map-info-mobile', 'btn-toggle', 'inset-y-0', 'z-50', 'text-gray-500', 'control', 'h-8', 'checkbox-custom', 'read-more-btn', 'tab-city', 'header-title', 'text-md', 'bg-white', 'xl:ml-auto', 'xl:pl-0', 'my-7', 'mt-[11px]', 'footer', 'border-gray-300', 'mb-2', 'w-4', 'flex-0-0-auto', 'md:bottom-auto', 'xl:divide-primary-100', 'opacity-50', 'my-0', 'lg:w-[98px]', 'venue-rating-container', 'venue-path-link', 'lg:absolute', 'text-tab-login', 'w-0', 'text-white', 'hover:text-primary-500', 'w-[18px]', 'tab-recovery-member', 'space-x-px', 'space-y-px', 'btn-footer-toggler', 'min-h-auto', 'ambassador', 'control-right', 'rounded-t-xl', 'tab-content', 'listing-rating', 'mt-2', 'grid-cols-5', 'btn-add-listing-to-favorite', 'bg-transparent', 'lg:pl-px', 'mt-0.5', 'md:justify-start', 'lg:mr-5', 'before:pl-2', 'img-galaxy', 'uppercase', 'w-8', 'my-3', 'dropdown-toggle', 'tab-register', 'py-4', 'search-overlay-content', 'content-visibility-auto', 'xl:items-center', 'before:fixed', 'hover:text-red-500', 'ml-0.5', 'form-check-select', 'space-x-2', 'focus:bg-g-lighted-blue', 'h-full', 'focus:ring', 'h-[18px]', 'text-base', 'w-4.5', 'venue-info-container', 'tab-famous', 'xl:px-5', 'w-2/5', 'hover:bg-primary-500', 'sm:mt-0', 'xl:w-[674px]', 'w-5', 'btn-forgot-password-toggle', 'md:mt-5', 'hover:text-primary-300', 'xl:absolute', 'w-9/12', 'btn-update-info', 'xl:max-w-full', 'dots', 'modal-dialog-left', 'h-px', 'h-0', 'sm:items-center', '-mt-px', 'text-facebook', 'grid-cols-2', 'm-0', '-mr-2', 'bottom-0', 'bg-vegetarian', 'web', 'text-2xl', 'before:-mx-3', 'closed', 'navbar-brand', 'md:h-25', 'md:order-0', 'flex-1', 'rating-list', 'border-b', 'lg:rounded-l-xl', 'ml-4', 'active:bg-g-light-blue', 'mr-9', 'text-tab-register', 'mb-12', 'w-full', 'mt-16', 'md:max-h-[200px]', 'placeholder-block', 'transition-color', 'ml-5', 'lg:w-8', 'hover:text-gray-200', 'w-3.5', 'btn-google-auth', 'text-gray-600', 'right-4', 'z-8', 'right-2', 'h-18', 'register-socials', 'btn-save-listing-to-trip', 'border-t', 'lg:items-start', 'ml-3', 'px-1.5', 'bg-black/30', 'md:ml-5', 'md:ml-20', 'text-right', 'search-overlay-form', 'venue-list-image-link', 'text-normal', 'lg:h-8', 'appearance-none', 'lg:grid-cols-4', 'btn-favorite-text', 'px-6', 'xl:hidden', 'mt-1', 'min-h-[80px]', 'btn-toggle-inner', 'my-5', 'modal-header', 'py-3', 'mt-1.5', 'lg:space-y-0', 'nav-item-login', 'gcse-search', '-mx-3', 'px-2', 'lg:mx-auto', 'post-response-form', 'md:w-full', 'main-content', 'justify-between', 'mt-8', 'mr-3', 'rounded-md', 'search-overlay', 'xl:justify-center', 'item-bottom', 'duration-200', 'pr-9', 'h-4.5', 'h-12', 'modal-title-step-2', 'px-4', 'md:rounded-lg', 'comments', 'sm:w-11', 'dropdown-item', 'md:mb-0', 'mr-1.5', 'col', 'h-24', 'text-yellow-500', 'md:pl-7', 'w-4/5', 'text-[0.9375rem]', 'before:-z-1', 'btn-toggle-review', 'checkbox-overlay', 'md:w-6/12', 'xl:w-[344px]', 'before-default', 'scrolling-touch', 'item-image', 'lg:w-5', 'w-1/4', 'lg:py-12', 'overflow-hidden', 'g-recaptcha-authentication', 'bg-pinterest', 'lazy-js-image', 'register-text', 'nav-tabs-line', 'p-0', 'bg-twitter-x', 'register-container', 'toggle-password-visibility', 'sm:px-5', 'venue-list-images', 'register-form-container', 'leading-none', 'lg:min-h-auto', 'space-y-4', 'lg:py-4', 'md:order-2', 'md:pr-2', 'p-avatar', 'p-2.5', 'px-5', 'h-26', 'next', 'py-2', 'mb-4', 'user-review-text', 'text-primary-500', 'h-auto', 'hover:bg-black/70', 'md:pt-6', 'search-overlay-results', 'pt-6', 'register-container-alert', 'hover:text-white', 'md:mt-8', 'md:mt-0', 'ml-6', 'venue-info', 'text-muted', 'modal-content', 'gallery-header', 'pr-2', 'footer-content', 'lg:flex', 'mb-7', 'mt-px', 'md:max-h-full', 'btn-toggle-search', 'media-review', 'border', 'py-2.5', '-ml-3', 'truncate', 'xl:border-b-0', 'item-review', 'pt-3', 'md:w-2/12', 'lg:px-8', 'flex-wrap', 'rating-reviews', 'sm:justify-between', 'ease-in-out', 'dialog-username', '-ml-1', 'cursor-pointer', 'items-center', 'login-apple', 'space-x-4', 'checkbox-input', 'sm:pt-5', 'comment-reply', 'xl:pr-2', 'xl:text-gray-600', 'bg-youtube', 'px-3.5', 'sm:flex-row', 'xl:pl-12', 'max-w-full', 'fixed', 'md:text-[1.75rem]', 'lg:px-12', 'rounded-full', 'btn-toggler-prev', 'modal-login', 'lg:items-center', 'lg:flex-grow', 'shadow-gallery-control', 'w-40', 'line-clamp-4', 'lg:w-1/3', 'before:bg-white:', 'md:h-auto', 'h-11', 'w-9', '-mb-4', 'inline-block', 'lg:h-auto', 'help-block', 'tab-login', 'animated', 'xl:h-15', 'md:absolute', 'h-5', 'xl:pb-3', 'form-select-review', 'sm:flex', 'bg-primary-500', 'xl:pr-0', 'border-gray-600', 'lg:px-6', 'bg-black/40', 'before:pointer-events-none', 'fade', 'mr-0.5', 'md:w-[350px]', 'xl:w-48', 'listing-hours', 'space-x-1', 'leading-normal', 'members-search-item', 'h-10', 'label', 'md:hidden', 'pb-4', 'add-review-btn-label', 'text-xl', 'lg:rounded-xl', 'xl:w-1/2', 'p-2', 'xl:px-4', 'dropdown', 'hover:bg-primary-300', 'mt-6', 'dialog-password', 'align-middle', 'xl:relative', 'cons-pros', 'px-1', 'md:border-gray-200', 'hover:border-g-light-blue', 'z-60', 'register-placeholder', 'modal', 'share-review', 'py-1', 'ease-in', 'venue-description', 'md:items-center', 'leading-tight', 'md:h-50', 'listing-column-right', 'justify-around', 'before:w-screen', 'h4', 'list-item-hours', 'md:w-5/12', 'mx-auto', 'listing', 'pl-0.5', 'modal-dialog-right', 'pr-32', 'md:right-0', 'hover:border-primary-300', 'lg:block', 'preview-gallery', 'bg-black', 'w-1/3', 'nav-link', 'md:mr-20', 'z-10', 'btn-submit', 'form', 'navbar-brand-image', 'bg-vegan', 'gallery-content', 'venue-count', 'xl:flex', 'before:pr-1', 'overflow-x-auto', 'text-sm', 'lg:space-x-px', 'focus:border-input', 'tab-business', 'pb-2'}",
+    "ids": "{'1283042', 'config', '1194917', '1271071', 'g-recaptcha-authentication', 'business-overlay', 'navbar-logged-out', '1232613', 'sitelink-profile-youtube', '1204343', 'famous-overlay', 'forums-overlay', 'listing-images', '1244199', 'recipes-tab', 'deferred-scripts', 'sitelink-profile-pinterest', 'modal-forgot-password', 'navbar-logged-in', 'recovery-member-tab', 'lng-nearby-navbar', 'sitelink-profile-twitter-x', '683112', 'forum-tab', 'recipes-overlay', '1262323', 'login-form', 'limit', 'remember', '1117294', 'dialog-username', 'all-tab', 'full-site-content', '1261563', 'tab-content-search-overlay', 'modal-forgot-password-form', 'business-tab', 'btn-share-listing', 'deferred-styles', '1266685', 'sitelink-profile-facebook', 'sort', '1792858', 'geolocate-user-nearby-btn', 'modal-register-form', '1625488', '1195927', '1584352', 'famous-tab', 'comment-gallery', '1271242', 'remember-label', 'all-overlay', 'modal-forgot-password-email', 'register-tab', 'city-overlay', 'login-tab', 'authentication-modal', '1580590', 'modal-gallery', 'lat-nearby-navbar', '1166908', 'tab-content-auth', 'dialog-recovery-member', '1761152', 'location-nearby-form-navbar', '1265472', '1207229', '1306305', 'btn-sidebar', 'login', 'reviews', 'params', '1131604', 'password', '739725', 'city-tab', '1297834', 'web-listing', '1529177', 'sitelink-profile-instagram', '1631949'}",
+    "text_patterns": {
+      "phones": [
+        "2059697779",
+        "2059697779"
+      ],
+      "hours": [
+        "1:30pm"
+      ]
+    }
+  },
+  {
+    "url": "html_analysis\\sample_3.html",
+    "title": "Landbageriet - Naturbageriet - Copenhagen  Bakery  - HappyCow",
+    "meta_tags": {
+      "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "og:title": "Landbageriet - Naturbageriet - Copenhagen  Bakery  - HappyCow",
+      "og:type": "article",
+      "og:url": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965",
+      "og:image": "https://images.happycow.net/venues/500/23/96/hcmp23965_632141.jpeg",
+      "og:image:width": "500",
+      "og:image:height": "375",
+      "fb:app_id": "202351993123002",
+      "msapplication-TileColor": "#603cba",
+      "theme-color": "#ffffff",
+      "description": "Reviews of vegan bakery Landbageriet - Naturbageriet in Copenhagen, Denmark 'I grabbed a bit of everything, including chocolate croissant, banana bread, cinnamon roll, and cinnamon snail.'",
+      "og:description": "Reviews of vegan bakery Landbageriet - Naturbageriet in Copenhagen, Denmark 'I grabbed a bit of everything, including chocolate croissant, banana bread, cinnamon roll, and cinnamon snail.'",
+      "keywords": "Landbageriet - Naturbageriet, vegan bakery, vegan baked goods, dairy-free, dairy free, glutenfree, gluten-free"
+    },
+    "structured_data": [],
+    "potential_fields": {
+      "name": [
+        {
+          "selector": "h1",
+          "text": "Search HappyCow",
+          "tag": "h1",
+          "classes": [
+            "text-3xl",
+            "leading-tight",
+            "ml-3",
+            "md:ml-5",
+            "sm:pr-3"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "Signup",
+          "tag": "h1",
+          "classes": [
+            "modal-title-step-2",
+            "mb-5",
+            "text-primary-500",
+            "text-2xl",
+            "hidden",
+            "lg:text-center",
+            "lg:mx-auto"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "Landbageriet - Naturbageriet",
+          "tag": "h1",
+          "classes": [
+            "header-title",
+            "text-2xl",
+            "leading-normal",
+            "break-words",
+            "md:text-[1.75rem]"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h2",
+          "text": "Member Account Recovery Request",
+          "tag": "h2",
+          "classes": [
+            "text-2xl",
+            "text-primary-500",
+            "leading-normal",
+            "lg:text-center"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": ".title",
+          "text": "IdaJohansen",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/IdaJohansen"
+        },
+        {
+          "selector": ".title",
+          "text": "ampallang",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/ampallang"
+        },
+        {
+          "selector": ".title",
+          "text": "sage119",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/sage119"
+        },
+        {
+          "selector": ".title",
+          "text": "AndrewMina",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/AndrewMina"
+        },
+        {
+          "selector": ".title",
+          "text": "nicoGBB",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/nicoGBB"
+        },
+        {
+          "selector": ".title",
+          "text": "zachradge",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/zachradge"
+        },
+        {
+          "selector": ".title",
+          "text": "Eima",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Eima"
+        },
+        {
+          "selector": ".title",
+          "text": "wunderbarbara",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/wunderbarbara"
+        },
+        {
+          "selector": ".title",
+          "text": "lizzienicholls123",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/lizzienicholls123"
+        },
+        {
+          "selector": ".title",
+          "text": "TiltedTaube",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/TiltedTaube"
+        },
+        {
+          "selector": ".title",
+          "text": "corinna.happy.vegan",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/corinna.happy.vegan"
+        },
+        {
+          "selector": ".title",
+          "text": "fruggla",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/fruggla"
+        },
+        {
+          "selector": ".title",
+          "text": "Nara471",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Nara471"
+        },
+        {
+          "selector": ".title",
+          "text": "Plant_powered_travels",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Plant_powered_travels"
+        },
+        {
+          "selector": ".title",
+          "text": "Waterwitch",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Waterwitch"
+        },
+        {
+          "selector": ".title",
+          "text": "SofieNilsson",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/SofieNilsson"
+        },
+        {
+          "selector": ".title",
+          "text": "OskarHenriksson",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/OskarHenriksson"
+        },
+        {
+          "selector": ".title",
+          "text": "SarahNiamh",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/SarahNiamh"
+        },
+        {
+          "selector": ".title",
+          "text": "katiesmz",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/katiesmz"
+        },
+        {
+          "selector": ".title",
+          "text": "McMallory",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/McMallory"
+        },
+        {
+          "selector": ".title",
+          "text": "theveganaccountant",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/theveganaccountant"
+        },
+        {
+          "selector": ".title",
+          "text": "Felice",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Felice"
+        },
+        {
+          "selector": ".title",
+          "text": "Chiraraa",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Chiraraa"
+        },
+        {
+          "selector": ".title",
+          "text": "JenniferLucy",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/JenniferLucy"
+        },
+        {
+          "selector": ".title",
+          "text": "Annethom",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Annethom"
+        },
+        {
+          "selector": ".title",
+          "text": "sanzett",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/sanzett"
+        },
+        {
+          "selector": ".title",
+          "text": "Rhianora",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Rhianora"
+        },
+        {
+          "selector": ".title",
+          "text": "Lunasea55",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Lunasea55"
+        },
+        {
+          "selector": ".title",
+          "text": "LauraBaldi",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/LauraBaldi"
+        },
+        {
+          "selector": ".title",
+          "text": "IdaJohansen",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/IdaJohansen"
+        }
+      ],
+      "address": [
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "Frederiksborggade 29,Copenhagen,Denmark,1360",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "Frederiksborggade 29,Copenhagen,Denmark,1360",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "phone": [
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+45-33146226",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+45-33146226",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+45-33146226"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+45-33146226",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+45-33146226"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+45-33146226"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+45-33146226",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+45-33146226"
+        }
+      ],
+      "website": [
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Website",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "http://land-bageriet.dk"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "land-bageriet.dk",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "http://land-bageriet.dk"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "2",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=2"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "3",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=3"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "4",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=4"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "5",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=5"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "6",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "text-gray-600",
+            "font-normal",
+            "w-9",
+            "h-9",
+            "sm:w-11",
+            "sm:h-11",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=6"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "8",
+          "tag": "a",
+          "classes": [
+            "pagination-link",
+            "rounded-full",
+            "w-9",
+            "h-9",
+            "text-gray-600",
+            "font-normal",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200",
+            "ease-in-out",
+            "sm:w-11",
+            "sm:h-11"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965?page=8"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Link to this page from your site",
+          "tag": "a",
+          "classes": [
+            "font-normal",
+            "leading-relaxed",
+            "flex",
+            "items-center",
+            "justify-between",
+            "group",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/landbageriet-naturbageriet-copenhagen-23965/link"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Website",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "http://land-bageriet.dk"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "land-bageriet.dk",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "http://land-bageriet.dk"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "View More",
+          "tag": "a",
+          "classes": [
+            "text-sm",
+            "font-normal",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/blog"
+        }
+      ],
+      "rating": [],
+      "reviews": [
+        {
+          "selector": ".reviews",
+          "text": "sage119Points +279Vegan21 Jun 2025Good- EditI grabbed a bit of everything, including chocolate croissant, banana bread, cinnamon roll, and cinnamon snail.I enjoyed the chocolate croissant and the cinn",
+          "tag": "div",
+          "classes": [
+            "reviews",
+            "mt-6"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "cuisine": [],
+      "hours": [],
+      "price": [
+        {
+          "selector": "[itemprop=\"priceRange\"]",
+          "text": "https://www.happycow.netEuropeDenmarkView all Copenhagen listingsCopenhagen312All Photos(312)Top Rated Bakery in CopenhagenLandbageriet - Naturbageriet(214)429Loading...BakeryBakeryA small bakery that",
+          "tag": "meta",
+          "classes": [],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "description": [
+        {
+          "selector": "[itemprop=\"description\"]",
+          "text": "A small bakery that makes both traditional as well vegan baked goods. Vegan range varies and might include cinnamon rolls, banana muffin, marzipan cookies, snegle, croissants, and cake. Uses honey and",
+          "tag": "p",
+          "classes": [
+            "venue-description",
+            "font-normal",
+            "break-words"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "social_media": []
+    },
+    "css_classes": "{'text-gray-800', 'lg:py-0', 'lg:mt-11', 'favorite-badge', 'item-top', 'ml-10', 'md:mt-6', 'mt-12', 'before:inset-y-0', 'input-control', 'inset-x-0', 'leading-relaxed', 'comment-response', 'md:flex', 'venue-hours-info-container', 'md:block', 'pr-1', 'w-fit', 'mt-4', 'sm:mr-3', 'ml-1.5', 'transform', 'justify-end', 'p-4', 'mb-1', 'md:mb-5', 'xl:border', 'object-cover', 'lg:w-4/12', 'lg:top-0', 'comment-form', 'h-52', 'pagination-control', 'h-6', 'w-2/3', 'fadeIn', 'lg:px-0', 'dialog-default', 'bg-cover', '-mt-0.5', 'md:mt-1', 'pl-3', 'mt-5', 'text-red-500', 'absolute', 'container', 'text-3xl', 'w-1/2', 'empty:hidden', 'tab-pane', 'overflow-y-auto', 'right-0', 'pl-12', 'sm:mb-0', 'hover:opacity-85', 'nav-item-register', 'last:hidden', 'item-video', 'lg:relative', 'lg:ml-12', 'w-24', 'checked:border-primary-100', 'listing-container', 'max-h-100', 'pagination', 'previous', '-mt-[2px]', 'hidden', 'with-errors', 'comment-menu', 'page-content', 'xl:border-primary-500', 'btn-login', 'modal-dialog', 'lg:order-3', 'lg:hidden', 'xl:w-auto', 'ml-0', 'xl:block', 'xl:truncate', 'w-7', 'bg-gray-200', 'lg:grid', 'content-item', 'md:py-2', 'lg:grid-cols-2', '-mr-px', 'bg-facebook', 'lg:order-2', 'placeholder-slot', 'favorite-icon', 'lg:pl-8', 'px-9', 'modal-close', 'border-primary-100', 'md:rounded-xl', 'lg:w-2/3', 'border-primary-500', 'left-0', 'md:text-left', 'ml-2', '-ml-0.5', 'xl:mr-2', 'before:absolute', 'btn-toggle-animation', 'lg:h-5', 'w-10', 'scale-90', 'listing-column-left', 'hover:underline', 'md:w-7/12', 'my-4', 'checked:bg-primary-100', 'group-hover:text-primary-500', 'lg:gap-6', 'h-4', 'lg:mt-0', 'pt-1', 'query-search-input', 'rounded-xl', 'tranistion-colors', 'flex-col', 'opacity-0', 'rounded', 'lg:-mt-8', 'md:list-item', 'ml-auto', 'mr-6', 'md:ml-3', 'tab-forums', 'control-left', '-mt-1', 'md:inline-flex', 'md:mx-0', 'hover:bg-g-lighted-blue', 'lg:order-1', 'h-3', 'text-xs', 'text-bakery', 'min-h-13', 'md:w-3/12', 'lg:-mt-1', 'max-w-[400px]', 'relative', 'md:line-clamp-none', 'w-11', 'w-3/12', 'auth-content', 'xl:py-0', 'lg:overflow-hidden', 'group', 'item-center', 'bottom-2', 'text-[13px]', 'nav-item', 'pb-9', 'edit-review', 'sm:h-11', 'md:top-0', 'before:h-screen', 'before:bg-gradient-black', 'my-1', 'md:max-h-[220px]', 'navbar-nav', 'sm:relative', 'comment-item', 'xl:w-[308px]', 'footer-credits', 'placeholder-venue-image', 'nav', 'bg-center', 'z-30', 'title-username', '-ml-1.5', 'max-h-[120px]', 'w-44', '-mr-5', 'w-16', 'focus:outline-none', 'font-normal', 'btn-toggle-box', 'btn-google-placeholder', 'overflow-x-hidden', 'h-9', 'checkbox-custom-primary', 'tab-all', 'lg:pt-6', 'lg:pb-0', 'navbar-mobile-btn', 'md:grid', 'border-primary-200', 'before:z-1', 'lg:w-7/12', 'response', 'justify-center', 'bg-red-500', 'bg-gray-100', 'transition-colors', 'leading-snug', 'lg:bg-white', 'w-6', 'text-base-500', 'px-3', 'space-x-1.5', 'h-7', '-mx-0.5', 'xl:mr-3', 'comment-body', 'nav-right', 'lg:bg-transparent', 'md:mt-4', 'bg-primary-100', 'lg:my-6', 'focus:border-g-light-blue', 'pb-1', '_csrf', 'gallery', 'xl:divide-y', 'comment-body-header', 'xl:ml-[64px]', 'listing-review-images', 'md:space-x-6', 'font-bold', 'bg-gradient-instagram', 'pt-4', 'flex-col-reverse', 'logged-in', 'md:mr-8', 'gap-2', 'latest-blog-posts', 'inline-flex', 'lg:flex-row', 'map-info-desktop', 'current-location', 'xl:mb-0', 'btn-add-listing', 'py-5', 'text-center', 'limit', '-mt-[3px]', 'text-black', 'data-element', 'z-9', 'xl-open-hover', 'md:pb-0', 'md:flex-wrap', 'btn-fb-login', 'mr-2', 'content-intrinsic-size-300', 'sm:pl-6', 'lg:space-y-px', 'sm:pr-3', 'md:space-y-3', 'w-auto', 'lg:right-0', 'lg:text-center', 'md:mb-4', 'gallery-controls', 'relatvie', 'map-info-widget', 'xl:px-6', 'md:space-y-0', 'btn-search-overlay', 'xl:overflow-hidden', 'my-6', 'before:inset-x-0', 'lg:py-3', 'w-2', 'dropdown-menu', 'pointer-events-none', 'top-0', 'grid', 'md:mr-2', 'space-x-3', 'mt-3', 'mx-1.5', 'flex', 'rounded-l-md', 'search-overlay-results-container', 'md:mt-[84px]', 'sm:py-4', 'xl:text-right', 'lg:w-1/2', 'category-Bakery', 'pagination-link', 'dialog-remember', 'rounded-lg', 'navbar-header', 'pt-3.5', 'text-transparent', 'lg:mt-6', 'active', 'shadow-none', 'xl:mr-0', 'img-iphone', 'logged-out', 'modal-gallery', 'navbar', 'title', 'md:left-auto', 'flex-nowrap', 'btn-apple-register', 'mb-3.5', 'nav-tabs', 'lg:w-8/12', 'login-facebook', 'transition-all', 'min-h-full', 'navbar-notifications', 'lg:flex-grow-0', 'xl:ml-0', 'border-dashed', 'dropdown-report', 'item-overlay', 'block', 'modal-login-google', 'shadow-sm', 'h-2', 'md:justify-center', 'p-3', 'text-lg', 'xl:px-0', 'mr-1', '-ml-5', 'mt-10', 'lg:w-5/12', 'before:h-20', 'z-1', 'md:-mt-1', 'reviews', 'ml-1', 'sm:max-h-[170px]', 'break-words', 'social-block', 'w-3/5', 'placeholder-base-color', 'border-gray-200', 'lg:h-50', 'leading-7', 'modal-title', 'tab-recipes', 'md:px-5', '-z-1', 'mt-7', 'mb-6', 'navbar-collapse', 'hours-summary', 'venue-last', 'h-3.5', 'mb-5', 'hover:bg-gray-200', 'xl:ml-[60px]', 'map-info-mobile', 'btn-toggle', 'inset-y-0', 'z-50', 'text-gray-500', 'control', 'h-8', 'checkbox-custom', 'read-more-btn', 'tab-city', 'header-title', 'text-md', 'bg-white', 'xl:ml-auto', 'xl:pl-0', 'my-7', 'mt-[11px]', 'footer', 'border-gray-300', 'mb-2', 'w-4', 'flex-0-0-auto', 'md:bottom-auto', 'xl:divide-primary-100', 'opacity-50', 'my-0', 'lg:w-[98px]', 'venue-rating-container', 'venue-path-link', 'lg:absolute', 'text-tab-login', 'w-0', 'text-white', 'hover:text-primary-500', 'w-[18px]', 'tab-recovery-member', 'space-x-px', 'space-y-px', 'btn-footer-toggler', 'min-h-auto', 'control-right', 'rounded-t-xl', 'tab-content', 'listing-rating', 'mt-2', 'grid-cols-5', 'btn-add-listing-to-favorite', 'bg-transparent', 'lg:pl-px', 'mt-0.5', 'md:justify-start', 'lg:mr-5', 'before:pl-2', 'img-galaxy', 'uppercase', 'w-8', 'my-3', 'dropdown-toggle', 'tab-register', 'py-4', 'search-overlay-content', 'content-visibility-auto', 'xl:items-center', 'before:fixed', 'hover:text-red-500', 'ml-0.5', 'form-check-select', 'space-x-2', 'focus:bg-g-lighted-blue', 'h-full', 'focus:ring', 'h-[18px]', 'text-base', 'w-4.5', 'venue-info-container', 'tab-famous', 'xl:px-5', 'w-2/5', 'hover:bg-primary-500', 'sm:mt-0', 'xl:w-[674px]', 'w-5', 'btn-forgot-password-toggle', 'md:mt-5', 'hover:text-primary-300', 'xl:absolute', 'w-9/12', 'btn-update-info', 'xl:max-w-full', 'dots', 'modal-dialog-left', 'h-px', 'bg-bakery', 'h-0', 'sm:items-center', '-mt-px', 'text-facebook', 'grid-cols-2', 'm-0', '-mr-2', 'bottom-0', 'web', 'text-2xl', 'before:-mx-3', 'navbar-brand', 'md:h-25', 'md:order-0', 'flex-1', 'rating-list', 'border-b', 'lg:rounded-l-xl', 'ml-4', 'active:bg-g-light-blue', 'mr-9', 'text-tab-register', 'mb-12', 'w-full', 'mt-16', 'md:max-h-[200px]', 'placeholder-block', 'transition-color', 'ml-5', 'lg:w-8', 'hover:text-gray-200', 'w-3.5', 'btn-google-auth', 'text-gray-600', 'right-4', 'z-8', 'right-2', 'h-18', 'register-socials', 'btn-save-listing-to-trip', 'border-t', 'lg:items-start', 'ml-3', 'px-1.5', 'bg-black/30', 'md:ml-5', 'md:ml-20', 'text-right', 'search-overlay-form', 'venue-list-image-link', 'text-normal', 'lg:h-8', 'appearance-none', 'lg:grid-cols-4', 'btn-favorite-text', 'px-6', 'xl:hidden', 'mt-1', 'min-h-[80px]', 'btn-toggle-inner', 'my-5', 'modal-header', 'py-3', 'mt-1.5', 'lg:space-y-0', 'nav-item-login', 'gcse-search', '-mx-3', 'px-2', 'lg:mx-auto', 'post-response-form', 'md:w-full', 'main-content', 'justify-between', 'mt-8', 'mr-3', 'rounded-md', 'search-overlay', 'xl:justify-center', 'item-bottom', 'duration-200', 'pr-9', 'h-4.5', 'h-12', 'modal-title-step-2', 'px-4', 'md:rounded-lg', 'comments', 'sm:w-11', 'dropdown-item', 'md:mb-0', 'mr-1.5', 'col', 'h-24', 'text-yellow-500', 'md:pl-7', 'w-4/5', 'text-[0.9375rem]', 'before:-z-1', 'btn-toggle-review', 'checkbox-overlay', 'md:w-6/12', 'xl:w-[344px]', 'before-default', 'scrolling-touch', 'item-image', 'lg:w-5', 'w-1/4', 'lg:py-12', 'overflow-hidden', 'g-recaptcha-authentication', 'bg-pinterest', 'lazy-js-image', 'register-text', 'nav-tabs-line', 'p-0', 'bg-twitter-x', 'register-container', 'toggle-password-visibility', 'sm:px-5', 'venue-list-images', 'register-form-container', 'leading-none', 'lg:min-h-auto', 'space-y-4', 'lg:py-4', 'md:order-2', 'md:pr-2', 'p-avatar', 'p-2.5', 'px-5', 'h-26', 'next', 'py-2', 'mb-4', 'user-review-text', 'text-primary-500', 'h-auto', 'hover:bg-black/70', 'md:pt-6', 'search-overlay-results', 'pt-6', 'register-container-alert', 'hover:text-white', 'md:mt-8', 'md:mt-0', 'ml-6', 'venue-info', 'text-muted', 'modal-content', 'gallery-header', 'pr-2', 'footer-content', 'lg:flex', 'mb-7', 'mt-px', 'md:max-h-full', 'btn-toggle-search', 'media-review', 'border', 'py-2.5', '-ml-3', 'truncate', 'xl:border-b-0', 'item-review', 'pt-3', 'md:w-2/12', 'lg:px-8', 'flex-wrap', 'rating-reviews', 'sm:justify-between', 'ease-in-out', 'bg-gradient-top-rated', 'dialog-username', '-ml-1', 'cursor-pointer', 'items-center', 'login-apple', 'space-x-4', 'checkbox-input', 'sm:pt-5', 'comment-reply', 'xl:pr-2', 'xl:text-gray-600', 'bg-youtube', 'px-3.5', 'sm:flex-row', 'xl:pl-12', 'max-w-full', 'fixed', 'md:text-[1.75rem]', 'lg:px-12', 'rounded-full', 'btn-toggler-prev', 'modal-login', 'lg:items-center', 'lg:flex-grow', 'shadow-gallery-control', 'w-40', 'line-clamp-4', 'lg:w-1/3', 'before:bg-white:', 'md:h-auto', 'h-11', 'w-9', '-mb-4', 'inline-block', 'lg:h-auto', 'help-block', 'tab-login', 'animated', 'xl:h-15', 'md:absolute', 'h-5', 'xl:pb-3', 'form-select-review', 'sm:flex', 'bg-primary-500', 'xl:pr-0', 'border-gray-600', 'lg:px-6', 'bg-black/40', 'before:pointer-events-none', 'fade', 'mr-0.5', 'md:w-[350px]', 'xl:w-48', 'listing-hours', 'space-x-1', 'leading-normal', 'members-search-item', 'h-10', 'label', 'md:hidden', 'pb-4', 'add-review-btn-label', 'text-xl', 'lg:rounded-xl', 'md:-mb-3', 'xl:w-1/2', 'p-2', 'xl:px-4', 'dropdown', 'hover:bg-primary-300', 'mt-6', 'dialog-password', 'align-middle', 'xl:relative', 'cons-pros', 'px-1', 'md:border-gray-200', 'hover:border-g-light-blue', 'bg-clip-text', 'z-60', 'register-placeholder', 'modal', 'share-review', 'py-1', 'ease-in', 'venue-description', 'md:items-center', 'leading-tight', 'md:h-50', 'listing-column-right', 'justify-around', 'before:w-screen', 'h4', 'list-item-hours', 'md:w-5/12', 'mx-auto', 'listing', 'pl-0.5', 'modal-dialog-right', 'pr-32', 'md:right-0', 'hover:border-primary-300', 'lg:block', 'preview-gallery', 'bg-black', 'w-1/3', 'nav-link', 'md:mr-20', 'z-10', 'btn-submit', 'form', '-mb-2', 'navbar-brand-image', 'bg-vegan', 'gallery-content', 'venue-count', 'xl:flex', 'before:pr-1', 'overflow-x-auto', 'text-sm', 'lg:space-x-px', 'focus:border-input', 'tab-business', 'pb-2'}",
+    "ids": "{'config', 'paint23_linear_217_3899', '1890299', 'paint9_linear_217_3899', 'g-recaptcha-authentication', '1859041', 'business-overlay', 'navbar-logged-out', 'paint15_linear_217_3899', '1957289', 'paint20_linear_217_3899', 'sitelink-profile-youtube', 'famous-overlay', 'forums-overlay', 'listing-images', '1862658', 'recipes-tab', 'deferred-scripts', 'sitelink-profile-pinterest', 'modal-forgot-password', 'paint18_linear_217_3899', 'paint6_linear_217_3899', 'navbar-logged-in', 'recovery-member-tab', 'lng-nearby-navbar', 'sitelink-profile-twitter-x', '1820251', '1780808', 'forum-tab', 'recipes-overlay', '1842698', 'paint24_linear_217_3899', 'login-form', 'paint14_linear_217_3899', '1748591', 'limit', 'remember', 'paint10_linear_217_3899', 'paint19_linear_217_3899', 'paint11_linear_217_3899', 'dialog-username', 'all-tab', 'full-site-content', '1918353', 'tab-content-search-overlay', 'modal-forgot-password-form', 'business-tab', 'btn-share-listing', '1791051', 'deferred-styles', 'paint13_linear_217_3899', 'paint22_linear_217_3899', 'sitelink-profile-facebook', 'paint17_linear_217_3899', 'paint21_linear_217_3899', 'sort', '1898332', 'paint12_linear_217_3899', 'geolocate-user-nearby-btn', 'paint4_linear_217_3899', 'paint1_linear_217_3899', 'modal-register-form', '1741152', '1800123', '1859510', 'famous-tab', '1874445', '1825839', 'comment-gallery', 'remember-label', 'all-overlay', 'modal-forgot-password-email', 'register-tab', '1847600', 'city-overlay', 'login-tab', '1746659', 'authentication-modal', 'paint3_linear_217_3899', 'modal-gallery', '1834350', 'paint2_linear_217_3899', 'paint7_linear_217_3899', '1802097', 'lat-nearby-navbar', '1862860', 'tab-content-auth', '1857794', '1774987', '1886583', 'dialog-recovery-member', 'location-nearby-form-navbar', '1928114', '1852064', 'btn-sidebar', 'paint5_linear_217_3899', 'paint8_linear_217_3899', 'login', 'paint16_linear_217_3899', '1902892', 'reviews', 'params', 'password', 'city-tab', 'paint0_linear_217_3899', 'web-listing', 'sitelink-profile-instagram'}",
+    "text_patterns": {}
+  },
+  {
+    "url": "html_analysis\\sample_5.html",
+    "title": "Alive & Well Natural Health Emporium - Kahului Hawaii Health Store  - HappyCow",
+    "meta_tags": {
+      "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "og:title": "Alive & Well Natural Health Emporium - Kahului Hawaii Health Store  - HappyCow",
+      "og:type": "article",
+      "og:url": "https://www.happycow.net/reviews/alive-and-well-natural-health-emporium-kahului-6033",
+      "og:image": "https://www.happycow.net/img/hc-banner.jpg",
+      "og:image:width": "885",
+      "og:image:height": "885",
+      "fb:app_id": "202351993123002",
+      "msapplication-TileColor": "#603cba",
+      "theme-color": "#ffffff",
+      "description": "Reviews of health food store Alive & Well Natural Health Emporium in Kahului, Hawaii, USA 'Saw this place listed on happycow some years ago and have shopped here a couple of times. Was just here again this week - heres my Maui Alive & Well'",
+      "og:description": "Reviews of health food store Alive & Well Natural Health Emporium in Kahului, Hawaii, USA 'Saw this place listed on happycow some years ago and have shopped here a couple of times. Was just here again this week - heres my Maui Alive & Well'",
+      "keywords": "Alive & Well Natural Health Emporium, health food, health-food, store, market, co-op, bio, organic food, natural foods"
+    },
+    "structured_data": [],
+    "potential_fields": {
+      "name": [
+        {
+          "selector": "h1",
+          "text": "Search HappyCow",
+          "tag": "h1",
+          "classes": [
+            "text-3xl",
+            "leading-tight",
+            "ml-3",
+            "md:ml-5",
+            "sm:pr-3"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "Signup",
+          "tag": "h1",
+          "classes": [
+            "modal-title-step-2",
+            "mb-5",
+            "text-primary-500",
+            "text-2xl",
+            "hidden",
+            "lg:text-center",
+            "lg:mx-auto"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h1",
+          "text": "Alive & Well Natural Health Emporium",
+          "tag": "h1",
+          "classes": [
+            "header-title",
+            "text-2xl",
+            "leading-normal",
+            "break-words",
+            "md:text-[1.75rem]"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "h2",
+          "text": "Member Account Recovery Request",
+          "tag": "h2",
+          "classes": [
+            "text-2xl",
+            "text-primary-500",
+            "leading-normal",
+            "lg:text-center"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": ".title",
+          "text": "gr8vegan",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/gr8vegan"
+        },
+        {
+          "selector": ".title",
+          "text": "Chia",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/Chia"
+        },
+        {
+          "selector": ".title",
+          "text": "\u00b7X\u00b7",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/%C2%B7X%C2%B7"
+        },
+        {
+          "selector": ".title",
+          "text": "gr8vegan",
+          "tag": "a",
+          "classes": [
+            "title",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "/members/profile/gr8vegan"
+        }
+      ],
+      "address": [
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "340 Hana Hwy (at Central Maui),Kahului,Hawaii,USA,96732",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"address\"]",
+          "text": "340 Hana Hwy (at Central Maui),Kahului,Hawaii,USA,96732",
+          "tag": "p",
+          "classes": [
+            "font-normal"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "phone": [
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+1-808-877-4950",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "[itemprop=\"telephone\"]",
+          "text": "+1-808-877-4950",
+          "tag": "span",
+          "classes": [],
+          "id": "",
+          "href": ""
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+1-808-877-4950"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+1-808-877-4950",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+1-808-877-4950"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "Call",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "tel:+1-808-877-4950"
+        },
+        {
+          "selector": "a[href^=\"tel:\"]",
+          "text": "+1-808-877-4950",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "tel:+1-808-877-4950"
+        }
+      ],
+      "website": [
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Website",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "http://www.aliveandwellinmaui.com"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "aliveandwellinmaui.com",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "http://www.aliveandwellinmaui.com"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "HappyCow Terms",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/terms-of-use"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Link to this page from your site",
+          "tag": "a",
+          "classes": [
+            "font-normal",
+            "leading-relaxed",
+            "flex",
+            "items-center",
+            "justify-between",
+            "group",
+            "hover:text-primary-500",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/reviews/alive-and-well-natural-health-emporium-kahului-6033/link"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "Website",
+          "tag": "a",
+          "classes": [
+            "block",
+            "leading-none",
+            "mt-1.5",
+            "text-sm"
+          ],
+          "id": "",
+          "href": "http://www.aliveandwellinmaui.com"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "\u00a9 OpenStreetMap",
+          "tag": "a",
+          "classes": [
+            "text-white",
+            "hover:text-gray-200",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.openstreetmap.org/copyright"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "aliveandwellinmaui.com",
+          "tag": "a",
+          "classes": [
+            "text-primary-500",
+            "leading-normal",
+            "hover:text-primary-300",
+            "transition-color",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "http://www.aliveandwellinmaui.com"
+        },
+        {
+          "selector": "a[href^=\"http\"]",
+          "text": "View More",
+          "tag": "a",
+          "classes": [
+            "text-sm",
+            "font-normal",
+            "text-primary-500",
+            "hover:text-primary-300",
+            "transition-all",
+            "duration-200"
+          ],
+          "id": "",
+          "href": "https://www.happycow.net/blog"
+        }
+      ],
+      "rating": [],
+      "reviews": [
+        {
+          "selector": ".reviews",
+          "text": "ChiaPoints +3631Vegetarian11 Aug 2017Small store plenty of stock- EditSaw this place listed on happycow some years ago and have shopped here a couple of times. Was just here again this week - here's m",
+          "tag": "div",
+          "classes": [
+            "reviews",
+            "mt-6"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "cuisine": [],
+      "hours": [],
+      "price": [
+        {
+          "selector": "[itemprop=\"priceRange\"]",
+          "text": "https://www.happycow.netNorth AmericaUSAHawaiiView all Kahului listingsKahuluiAlive & Well Natural Health Emporium(3)6Loading...Health StoreHealth food shop with deli & juice bar inside. Stock include",
+          "tag": "meta",
+          "classes": [],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "description": [
+        {
+          "selector": "[itemprop=\"description\"]",
+          "text": "Health food shop with deli & juice bar inside. Stock includes supplements, vitamins, organic grocery, snack foods, environmentally friendly products, frozen and chilled food, and a small fresh produce",
+          "tag": "p",
+          "classes": [
+            "venue-description",
+            "font-normal",
+            "break-words"
+          ],
+          "id": "",
+          "href": ""
+        }
+      ],
+      "social_media": []
+    },
+    "css_classes": "{'text-gray-800', 'lg:py-0', 'lg:mt-11', 'favorite-badge', 'item-top', 'ml-10', 'md:mt-6', 'mt-12', 'before:inset-y-0', 'input-control', 'inset-x-0', 'leading-relaxed', 'comment-response', 'md:flex', 'venue-hours-info-container', 'md:block', 'pr-1', 'w-fit', 'mt-4', 'sm:mr-3', 'ml-1.5', 'transform', 'justify-end', 'p-4', 'mb-1', 'md:mb-5', 'xl:border', 'object-cover', 'lg:w-4/12', 'lg:top-0', 'comment-form', 'h-52', 'h-6', 'w-2/3', 'fadeIn', 'lg:px-0', 'dialog-default', 'bg-cover', '-mt-0.5', 'md:mt-1', 'pl-3', 'mt-5', 'text-red-500', 'absolute', 'container', 'text-3xl', 'empty:hidden', 'tab-pane', 'overflow-y-auto', 'right-0', 'pl-12', 'sm:mb-0', 'hover:opacity-85', 'nav-item-register', 'last:hidden', 'item-video', 'lg:relative', 'lg:ml-12', 'w-24', 'checked:border-primary-100', 'listing-container', 'max-h-100', '-mt-[2px]', 'hidden', 'with-errors', 'comment-menu', 'page-content', 'xl:border-primary-500', 'btn-login', 'modal-dialog', 'lg:order-3', 'lg:hidden', 'xl:w-auto', 'ml-0', 'xl:block', 'w-7', 'bg-gray-200', 'lg:grid', 'content-item', 'md:py-2', 'lg:grid-cols-2', 'bg-facebook', 'lg:order-2', 'placeholder-slot', 'favorite-icon', 'lg:pl-8', 'px-9', 'modal-close', 'border-primary-100', 'md:rounded-xl', 'lg:w-2/3', 'border-primary-500', 'left-0', 'md:text-left', 'ml-2', '-ml-0.5', 'xl:mr-2', 'before:absolute', 'btn-toggle-animation', 'lg:h-5', 'w-10', 'scale-90', 'listing-column-left', 'hover:underline', 'md:w-7/12', 'my-4', 'checked:bg-primary-100', 'group-hover:text-primary-500', 'lg:gap-6', 'h-4', 'lg:mt-0', 'pt-1', 'query-search-input', 'rounded-xl', 'tranistion-colors', 'flex-col', 'opacity-0', 'rounded', 'lg:-mt-8', 'md:list-item', 'ml-auto', 'mr-6', 'md:ml-3', 'tab-forums', 'control-left', '-mt-1', 'md:inline-flex', 'md:mx-0', 'hover:bg-g-lighted-blue', 'lg:order-1', 'h-3', 'text-xs', 'md:w-3/12', 'min-h-13', 'lg:-mt-1', 'max-w-[400px]', 'relative', 'md:line-clamp-none', 'w-11', 'w-3/12', 'auth-content', 'xl:py-0', 'lg:overflow-hidden', 'group', 'item-center', 'bottom-2', 'text-[13px]', 'nav-item', 'pb-9', 'edit-review', 'md:top-0', 'before:h-screen', 'before:bg-gradient-black', 'my-1', 'md:max-h-[220px]', 'navbar-nav', 'sm:relative', 'comment-item', 'footer-credits', 'placeholder-venue-image', 'nav', 'bg-center', 'z-30', 'title-username', 'max-h-[120px]', 'w-44', '-mr-5', 'focus:outline-none', 'font-normal', 'btn-toggle-box', 'btn-google-placeholder', 'overflow-x-hidden', 'h-9', 'checkbox-custom-primary', 'tab-all', 'lg:pt-6', 'lg:pb-0', 'navbar-mobile-btn', 'md:grid', 'border-primary-200', 'before:z-1', 'lg:w-7/12', 'response', 'justify-center', 'bg-red-500', 'bg-gray-100', 'transition-colors', 'leading-snug', 'lg:bg-white', 'w-6', 'text-base-500', 'px-3', 'space-x-1.5', 'h-7', '-mx-0.5', 'xl:mr-3', 'comment-body', 'nav-right', 'lg:bg-transparent', 'md:mt-4', 'bg-primary-100', 'lg:my-6', 'focus:border-g-light-blue', 'pb-1', '_csrf', 'gallery', 'xl:divide-y', 'comment-body-header', 'xl:ml-[64px]', 'md:space-x-6', 'font-bold', 'bg-gradient-instagram', 'pt-4', 'flex-col-reverse', 'logged-in', 'md:mr-8', 'gap-2', 'latest-blog-posts', 'inline-flex', 'lg:flex-row', 'h-64', 'map-info-desktop', 'current-location', 'xl:mb-0', 'btn-add-listing', 'py-5', 'text-center', '-mt-[3px]', 'text-black', 'data-element', 'z-9', 'xl-open-hover', 'md:pb-0', 'md:flex-wrap', 'btn-fb-login', 'mr-2', 'content-intrinsic-size-300', 'sm:pl-6', 'sm:pr-3', 'md:space-y-3', 'w-auto', 'lg:right-0', 'lg:text-center', 'md:mb-4', 'gallery-controls', 'map-info-widget', 'xl:px-6', 'md:space-y-0', 'btn-search-overlay', 'xl:overflow-hidden', 'my-6', 'before:inset-x-0', 'lg:py-3', 'w-2', 'dropdown-menu', 'pointer-events-none', 'top-0', 'grid', 'md:mr-2', 'space-x-3', 'mt-3', 'mx-1.5', 'flex', 'rounded-l-md', 'search-overlay-results-container', 'md:mt-[84px]', 'sm:py-4', 'xl:text-right', 'dialog-remember', 'rounded-lg', 'navbar-header', 'pt-3.5', 'lg:mt-6', 'active', 'shadow-none', 'xl:mr-0', 'img-iphone', 'logged-out', 'modal-gallery', 'navbar', 'title', 'break-all', 'md:left-auto', 'flex-nowrap', 'btn-apple-register', 'mb-3.5', 'nav-tabs', 'lg:w-8/12', 'login-facebook', 'transition-all', 'min-h-full', 'navbar-notifications', 'lg:flex-grow-0', 'bg-health-food-store', 'xl:ml-0', 'border-dashed', 'dropdown-report', 'item-overlay', 'block', 'modal-login-google', 'shadow-sm', 'h-2', 'md:justify-center', 'p-3', 'text-lg', 'xl:px-0', 'mr-1', '-ml-5', 'mt-10', 'lg:w-5/12', 'before:h-20', 'z-1', 'md:-mt-1', 'reviews', 'sm:max-h-[170px]', 'ml-1', 'break-words', 'social-block', 'w-3/5', 'placeholder-base-color', 'border-gray-200', 'leading-7', 'modal-title', 'tab-recipes', 'md:px-5', '-z-1', 'category-Health', 'mt-7', 'mb-6', 'navbar-collapse', 'hours-summary', 'hover:bg-gray-200', 'h-3.5', 'mb-5', 'xl:ml-[60px]', 'map-info-mobile', 'btn-toggle', 'inset-y-0', 'z-50', 'text-gray-500', 'control', 'h-8', 'checkbox-custom', 'read-more-btn', 'tab-city', 'header-title', 'text-md', 'bg-white', 'xl:ml-auto', 'my-7', 'xl:pl-0', 'mt-[11px]', 'footer', 'border-gray-300', 'mb-2', 'w-4', 'flex-0-0-auto', 'md:bottom-auto', 'xl:divide-primary-100', 'opacity-50', 'my-0', 'venue-rating-container', 'venue-path-link', 'lg:absolute', 'text-tab-login', 'w-0', 'text-white', 'hover:text-primary-500', 'w-[18px]', 'tab-recovery-member', 'btn-footer-toggler', 'min-h-auto', 'ambassador', 'control-right', 'rounded-t-xl', 'tab-content', 'listing-rating', 'mt-2', 'btn-add-listing-to-favorite', 'bg-transparent', 'mt-0.5', 'md:justify-start', 'lg:mr-5', 'before:pl-2', 'img-galaxy', 'uppercase', 'w-8', 'my-3', 'dropdown-toggle', 'tab-register', 'py-4', 'search-overlay-content', 'content-visibility-auto', 'xl:items-center', 'before:fixed', 'hover:text-red-500', 'ml-0.5', 'form-check-select', 'space-x-2', 'focus:bg-g-lighted-blue', 'h-full', 'focus:ring', 'h-[18px]', 'text-base', 'w-4.5', 'venue-info-container', 'tab-famous', 'xl:px-5', 'w-2/5', 'hover:bg-primary-500', 'sm:mt-0', 'xl:w-[674px]', 'w-5', 'btn-forgot-password-toggle', 'md:mt-5', 'hover:text-primary-300', 'xl:absolute', 'w-9/12', 'btn-update-info', 'xl:max-w-full', 'dots', 'modal-dialog-left', 'h-px', 'h-0', 'sm:items-center', '-mt-px', 'text-facebook', 'grid-cols-2', 'm-0', '-mr-2', 'bottom-0', 'bg-vegetarian', 'web', 'text-2xl', 'before:-mx-3', 'navbar-brand', 'md:order-0', 'flex-1', 'rating-list', 'border-b', 'lg:rounded-l-xl', 'ml-4', 'active:bg-g-light-blue', 'mr-9', 'text-tab-register', 'mb-12', 'w-full', 'mt-16', 'md:max-h-[200px]', 'placeholder-block', 'transition-color', 'ml-5', 'lg:w-8', 'hover:text-gray-200', 'w-3.5', 'btn-google-auth', 'text-gray-600', 'z-8', 'right-2', 'h-18', 'register-socials', 'btn-save-listing-to-trip', 'border-t', 'lg:items-start', 'ml-3', 'bg-black/30', 'md:ml-5', 'text-right', 'search-overlay-form', 'text-normal', 'lg:h-8', 'appearance-none', 'lg:grid-cols-4', 'btn-favorite-text', 'px-6', 'xl:hidden', 'mt-1', 'min-h-[80px]', 'btn-toggle-inner', 'my-5', 'modal-header', 'py-3', 'mt-1.5', 'nav-item-login', 'gcse-search', '-mx-3', 'px-2', 'lg:mx-auto', 'post-response-form', 'md:w-full', 'main-content', 'justify-between', 'mt-8', 'mr-3', 'rounded-md', 'search-overlay', 'xl:justify-center', 'item-bottom', 'duration-200', 'pr-9', 'h-4.5', 'h-12', 'modal-title-step-2', 'px-4', 'md:rounded-lg', 'comments', 'dropdown-item', 'md:mb-0', 'mr-1.5', 'col', 'h-24', 'text-yellow-500', 'md:pl-7', 'w-4/5', 'text-[0.9375rem]', 'before:-z-1', 'btn-toggle-review', 'checkbox-overlay', 'md:w-6/12', 'xl:w-[344px]', 'before-default', 'scrolling-touch', 'item-image', 'lg:w-5', 'w-1/4', 'lg:py-12', 'overflow-hidden', 'g-recaptcha-authentication', 'bg-pinterest', 'lazy-js-image', 'register-text', 'nav-tabs-line', 'p-0', 'bg-twitter-x', 'register-container', 'toggle-password-visibility', 'sm:px-5', 'register-form-container', 'leading-none', 'lg:min-h-auto', 'space-y-4', 'lg:py-4', 'md:order-2', 'md:pr-2', 'p-avatar', 'p-2.5', 'px-5', 'py-2', 'mb-4', 'user-review-text', 'text-primary-500', 'h-auto', 'md:pt-6', 'search-overlay-results', 'pt-6', 'text-health-food-store', 'register-container-alert', 'hover:text-white', 'md:mt-8', 'md:mt-0', 'ml-6', 'venue-info', 'text-muted', 'modal-content', 'w-[19rem]', 'gallery-header', 'pr-2', 'footer-content', 'lg:flex', 'mb-7', 'mt-px', 'md:max-h-full', 'btn-toggle-search', 'media-review', 'border', 'py-2.5', '-ml-3', 'truncate', 'xl:border-b-0', 'item-review', 'pt-3', 'md:w-2/12', 'lg:px-8', 'flex-wrap', 'rating-reviews', 'sm:justify-between', 'ease-in-out', 'dialog-username', '-ml-1', 'cursor-pointer', 'items-center', 'login-apple', 'space-x-4', 'checkbox-input', 'sm:pt-5', 'comment-reply', 'xl:pr-2', 'xl:text-gray-600', 'bg-youtube', 'px-3.5', 'sm:flex-row', 'xl:pl-12', 'fixed', 'md:text-[1.75rem]', 'lg:px-12', 'rounded-full', 'btn-toggler-prev', 'modal-login', 'lg:items-center', 'lg:flex-grow', 'shadow-gallery-control', 'w-40', 'line-clamp-4', 'before:bg-white:', 'md:h-auto', 'h-11', 'w-9', '-mb-4', 'inline-block', 'lg:h-auto', 'help-block', 'tab-login', 'animated', 'xl:h-15', 'md:absolute', 'h-5', 'xl:pb-3', 'Store', 'form-select-review', 'sm:flex', 'bg-primary-500', 'xl:pr-0', 'border-gray-600', 'lg:px-6', 'before:pointer-events-none', 'space-y-1.5', 'fade', 'mr-0.5', 'md:w-[350px]', 'listing-hours', 'space-x-1', 'leading-normal', 'members-search-item', 'h-10', 'label', 'md:hidden', 'pb-4', 'add-review-btn-label', 'text-xl', 'lg:rounded-xl', 'xl:w-1/2', 'p-2', 'xl:px-4', 'dropdown', 'hover:bg-primary-300', 'mt-6', 'dialog-password', 'align-middle', 'xl:relative', 'cons-pros', 'px-1', 'md:border-gray-200', 'hover:border-g-light-blue', 'z-60', 'register-placeholder', 'modal', 'share-review', 'py-1', 'ease-in', 'venue-description', 'md:items-center', 'leading-tight', 'md:h-50', 'listing-column-right', 'justify-around', 'before:w-screen', 'h4', 'list-item-hours', 'md:w-5/12', 'mx-auto', 'listing', 'modal-dialog-right', 'pr-32', 'md:right-0', 'hover:border-primary-300', 'lg:block', 'preview-gallery', 'bg-black', 'w-1/3', 'nav-link', 'z-10', 'btn-submit', 'form', 'navbar-brand-image', 'bg-vegan', 'gallery-content', 'xl:flex', 'before:pr-1', 'overflow-x-auto', 'text-sm', 'focus:border-input', 'tab-business', 'pb-2'}",
+    "ids": "{'sitelink-profile-facebook', 'config', 'sort', 'sitelink-profile-pinterest', 'tab-content-auth', 'geolocate-user-nearby-btn', 'deferred-styles', 'forum-tab', 'modal-register-form', 'dialog-recovery-member', 'location-nearby-form-navbar', 'recipes-overlay', 'g-recaptcha-authentication', 'business-overlay', 'navbar-logged-out', 'login-form', '55332', 'famous-tab', 'comment-gallery', 'sitelink-profile-youtube', 'remember-label', 'btn-sidebar', 'famous-overlay', 'remember', 'all-overlay', 'lat-nearby-navbar', 'modal-forgot-password-email', 'forums-overlay', 'listing-images', 'recipes-tab', 'login', '236574', 'deferred-scripts', 'register-tab', 'dialog-username', 'all-tab', 'city-overlay', 'login-tab', 'reviews', '65400', 'full-site-content', 'modal-forgot-password', 'tab-content-search-overlay', 'modal-forgot-password-form', 'authentication-modal', 'business-tab', 'params', 'modal-gallery', 'password', 'btn-share-listing', 'navbar-logged-in', 'city-tab', 'recovery-member-tab', 'web-listing', 'lng-nearby-navbar', 'sitelink-profile-twitter-x', 'sitelink-profile-instagram'}",
+    "text_patterns": {
+      "phones": [
+        "808-877-4950",
+        "808-877-4950"
+      ],
+      "hours": [
+        "8:00am",
+        "7:00pm",
+        "8:00am",
+        "6:00pm",
+        "10:00am",
+        "5:00pm"
+      ]
+    }
+  }
+]

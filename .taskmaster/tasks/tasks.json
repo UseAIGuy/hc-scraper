@@ -1,171 +1,220 @@
 {
-  "master": {
-    "tasks": [
-      {
-        "id": "1",
-        "title": "Enhance RestaurantDetail Data Model",
-        "description": "Expand the RestaurantDetail Pydantic model to include comprehensive fields for individual restaurant page data",
-        "status": "pending",
-        "priority": "high",
-        "dependencies": [],
-        "details": "Add fields for address, phone, website, social media, hours, ratings, reviews, cuisine types, features, and metadata. Ensure proper validation and optional field handling.",
-        "testStrategy": "Unit tests for model validation with various data combinations",
-        "subtasks": []
-      },
-      {
-        "id": "2",
-        "title": "Update Database Schema",
-        "description": "Add new columns to restaurants table for enhanced data fields",
-        "status": "pending",
-        "priority": "high",
-        "dependencies": [
-          "1"
-        ],
-        "details": "Create Supabase migration to add columns for all new RestaurantDetail fields. Ensure proper data types and constraints.",
-        "testStrategy": "Test migration rollback and data integrity",
-        "subtasks": []
-      },
-      {
-        "id": "3",
-        "title": "Implement Individual Page Scraping Engine",
-        "description": "Create core logic to visit and scrape individual restaurant detail pages",
-        "status": "pending",
-        "priority": "high",
-        "dependencies": [
-          "1"
-        ],
-        "details": "Build async function to visit restaurant URLs, handle page loading, and coordinate extraction strategies.",
-        "testStrategy": "Test with sample restaurant URLs and various page layouts",
-        "subtasks": []
-      },
-      {
-        "id": "4",
-        "title": "CSS Selector-Based Data Extraction",
-        "description": "Implement primary extraction strategy using CSS selectors for common page elements",
-        "status": "pending",
-        "priority": "high",
-        "dependencies": [
-          "3"
-        ],
-        "details": "Map HappyCow page structure to CSS selectors for extracting address, phone, hours, ratings, etc.",
-        "testStrategy": "Test extraction accuracy across multiple restaurant pages",
-        "subtasks": []
-      },
-      {
-        "id": "5",
-        "title": "Regex Fallback Extraction",
-        "description": "Implement regex-based extraction as fallback when CSS selectors fail",
-        "status": "pending",
-        "priority": "medium",
-        "dependencies": [
-          "4"
-        ],
-        "details": "Create regex patterns for extracting data from HTML when structured selectors aren't available.",
-        "testStrategy": "Test fallback triggers and extraction accuracy",
-        "subtasks": []
-      },
-      {
-        "id": "6",
-        "title": "LLM-Based Complex Extraction",
-        "description": "Implement LLM extraction for complex cases where structured methods fail",
-        "status": "pending",
-        "priority": "medium",
-        "dependencies": [
-          "5"
-        ],
-        "details": "Use Ollama/LLM to extract data from complex or non-standard page layouts as final fallback.",
-        "testStrategy": "Test LLM accuracy and performance on edge cases",
-        "subtasks": []
-      },
-      {
-        "id": "7",
-        "title": "Enhanced Caching and Duplicate Detection",
-        "description": "Implement intelligent caching to avoid re-scraping detailed restaurant data",
-        "status": "pending",
-        "priority": "medium",
-        "dependencies": [
-          "2"
-        ],
-        "details": "Check database for existing detailed records, implement data freshness logic, and skip re-processing when appropriate.",
-        "testStrategy": "Test cache hit/miss scenarios and data staleness detection",
-        "subtasks": []
-      },
-      {
-        "id": "8",
-        "title": "Individual Page Error Handling and Retry Logic",
-        "description": "Implement robust error handling for individual page failures",
-        "status": "pending",
-        "priority": "medium",
-        "dependencies": [
-          "3"
-        ],
-        "details": "Handle HTTP errors, timeouts, parsing failures with retry logic and partial data saving.",
-        "testStrategy": "Test various failure scenarios and recovery mechanisms",
-        "subtasks": []
-      },
-      {
-        "id": "9",
-        "title": "Enhanced Rate Limiting for Individual Pages",
-        "description": "Adapt anti-detection measures for increased request volume from individual page scraping",
-        "status": "pending",
-        "priority": "medium",
-        "dependencies": [
-          "3"
-        ],
-        "details": "Implement adaptive delays, enhanced blocking detection, and graceful degradation for individual page requests.",
-        "testStrategy": "Test rate limiting behavior under various load conditions",
-        "subtasks": []
-      },
-      {
-        "id": "10",
-        "title": "Progress Tracking and Monitoring",
-        "description": "Implement detailed progress tracking for individual restaurant processing",
-        "status": "pending",
-        "priority": "low",
-        "dependencies": [
-          "3"
-        ],
-        "details": "Track individual restaurant processing status, success rates, and provide detailed logging for monitoring.",
-        "testStrategy": "Test progress reporting accuracy and performance impact",
-        "subtasks": []
-      },
-      {
-        "id": "11",
-        "title": "Configuration Options for Individual Page Scraping",
-        "description": "Add configuration options to control individual page scraping behavior",
-        "status": "pending",
-        "priority": "low",
-        "dependencies": [
-          "3"
-        ],
-        "details": "Add config options for enabling/disabling individual scraping, concurrency limits, data freshness thresholds.",
-        "testStrategy": "Test all configuration combinations and edge cases",
-        "subtasks": []
-      },
-      {
-        "id": "12",
-        "title": "End-to-End Testing and Performance Optimization",
-        "description": "Comprehensive testing and optimization of the complete individual page scraping system",
-        "status": "pending",
-        "priority": "low",
-        "dependencies": [
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9"
-        ],
-        "details": "Test complete workflow with multiple cities, benchmark performance, optimize bottlenecks, and validate data quality.",
-        "testStrategy": "Full integration tests with performance benchmarks and data validation",
-        "subtasks": []
-      }
-    ],
-    "metadata": {
-      "created": "2025-01-07T23:00:00Z",
-      "updated": "2025-01-07T23:00:00Z",
-      "version": "1.0",
-      "project": "HappyCow Individual Restaurant Page Scraping"
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2025-01-27T00:00:00Z",
+    "lastUpdated": "2025-01-27T00:00:00Z",
+    "totalTasks": 12,
+    "tags": ["master"]
+  },
+  "tags": {
+    "master": {
+      "description": "Main development tasks for HappyCow scraper crawling fix",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Create Page Type Detection Utility",
+          "description": "Build a utility function to automatically detect whether a URL is a city listing page or individual restaurant page",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [],
+          "details": "Create a robust URL pattern matching system that can distinguish between:\n- City pages: `/north_america/usa/state/city/` patterns\n- Restaurant pages: `/reviews/restaurant-name-id/` patterns\n- Handle edge cases like `/update` suffixes and URL variations\n\nImplementation should include:\n- Regular expressions for URL pattern matching\n- Enum or constants for page types\n- Comprehensive test coverage for URL classification\n- Error handling for malformed URLs",
+          "testStrategy": "Unit tests covering all known URL patterns, edge cases, and malformed URLs. Test with actual HappyCow URLs from both page types.",
+          "acceptanceCriteria": [
+            "Correctly identifies city listing pages with 100% accuracy",
+            "Correctly identifies restaurant pages with 100% accuracy", 
+            "Handles edge cases like /update suffixes",
+            "Returns appropriate error for malformed URLs",
+            "Performance under 1ms per URL classification"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Define CSS Selector Strategy by Page Type",
+          "description": "Create page-type-specific CSS selector configurations for optimal crawling",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [1],
+          "details": "Define and implement CSS selector strategies:\n\n**City Listing Pages:**\n- Primary selectors: `.card-listing, .venue-list-item`\n- Fallback selectors: `.venue-item`\n- Error detection: `.no-results, .captcha`\n\n**Restaurant Pages:**\n- Primary selectors: `.restaurant-name, .venue-details, h1`\n- Content selectors: `.review-content, .venue-info, .contact-info`\n- Error detection: `.not-found, .error-message`\n\nImplementation should include:\n- Configuration objects for each page type\n- Fallback selector strategies\n- Timeout specifications per page type",
+          "testStrategy": "Test selectors against actual HappyCow pages. Verify elements exist and return expected content. Test fallback scenarios.",
+          "acceptanceCriteria": [
+            "City page selectors find restaurant listings successfully",
+            "Restaurant page selectors find restaurant details successfully",
+            "Fallback selectors work when primary selectors fail",
+            "Error detection selectors properly identify blocking/errors",
+            "Configuration is easily maintainable and extensible"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Implement Conditional Crawl4AI Configuration",
+          "description": "Refactor scraper to use different crawl4ai configurations based on detected page type",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [1, 2],
+          "details": "Modify the scraper's crawl4ai configuration to be page-type-aware:\n\n**Implementation Requirements:**\n- Create separate CrawlerRunConfig objects for city vs restaurant pages\n- Implement page type detection before crawling\n- Apply appropriate wait_for selectors based on page type\n- Handle timeout and retry logic per page type\n\n**Configuration Changes:**\n- City pages: Use existing working selectors\n- Restaurant pages: Use restaurant-specific selectors\n- Remove one-size-fits-all approach\n- Add error handling for unsupported page types",
+          "testStrategy": "Test with known failing restaurant URLs and working city URLs. Verify crawl4ai returns Success: True for both page types.",
+          "acceptanceCriteria": [
+            "City listing pages continue to work without regression",
+            "Restaurant pages now return Success: True from crawl4ai",
+            "Page type detection is called before every crawl",
+            "Appropriate selectors are used for each page type",
+            "Error handling works for unknown page types"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Add Regression Testing for City Listing Pages",
+          "description": "Ensure existing city listing functionality remains intact during refactoring",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [3],
+          "details": "Create comprehensive regression tests to prevent breaking existing functionality:\n\n**Test Coverage:**\n- Dallas, Texas listing page (known working)\n- Los Angeles, California listing page (known working)\n- Empty city pages (no restaurants)\n- Pages with pagination\n- Performance benchmarks\n\n**Test Implementation:**\n- Automated test suite with before/after comparisons\n- Performance regression detection\n- HTML content validation\n- Restaurant extraction validation",
+          "testStrategy": "Run tests against current working implementation, then after each change. Compare results for any regressions.",
+          "acceptanceCriteria": [
+            "All existing city pages continue to work",
+            "Performance within 10% of baseline",
+            "Same number of restaurants extracted",
+            "No new errors or exceptions",
+            "HTML content quality maintained"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Test Restaurant Page Crawling with New Configuration",
+          "description": "Validate that restaurant pages now successfully crawl with the new page-type-aware configuration",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [3],
+          "details": "Test the new configuration against known failing restaurant URLs:\n\n**Test URLs:**\n- https://www.happycow.net/reviews/tane-vegan-izakaya-los-angeles-467122/update\n- https://www.happycow.net/reviews/la-vegan-los-angeles-14477\n- https://www.happycow.net/reviews/my-vegan-los-angeles-119792\n\n**Validation Points:**\n- crawl4ai returns Success: True\n- HTML content is retrieved (>100K characters)\n- Restaurant details are extractable\n- No timeout errors\n- Performance within acceptable limits (30s max)",
+          "testStrategy": "Automated tests against the specific failing URLs. Manual verification of extracted restaurant data quality.",
+          "acceptanceCriteria": [
+            "All test restaurant URLs return Success: True",
+            "Restaurant details can be extracted from HTML",
+            "No timeout or blocking errors",
+            "Performance under 30 seconds per page",
+            "Extracted data matches manual verification"
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Implement Fallback Selector Strategy",
+          "description": "Add fallback logic when primary selectors fail to find content",
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [2, 3],
+          "details": "Implement intelligent fallback when primary selectors don't work:\n\n**Fallback Strategy:**\n- Try primary selectors first\n- If no elements found, try fallback selectors\n- If still no elements, try generic selectors (body, main)\n- Log which selector strategy worked for future optimization\n\n**Implementation:**\n- Retry logic with different selector sets\n- Logging and metrics collection\n- Graceful degradation to generic selectors\n- Performance optimization to avoid unnecessary retries",
+          "testStrategy": "Test with pages that might have different DOM structures. Verify fallback selectors are used when needed.",
+          "acceptanceCriteria": [
+            "Primary selectors are always tried first",
+            "Fallback selectors are used when primary fails",
+            "Generic selectors work as last resort",
+            "Logging shows which strategy was used",
+            "No performance degradation from fallback logic"
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Enhanced Error Handling and Logging",
+          "description": "Improve error messages and logging to distinguish between page type issues and actual crawling failures",
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [1, 3],
+          "details": "Enhance error handling to provide better debugging information:\n\n**Error Categories:**\n- Page type detection failures\n- CSS selector timeout failures\n- Network/crawling failures\n- Content extraction failures\n\n**Logging Improvements:**\n- Log detected page type for each URL\n- Log which selector strategy was used\n- Log performance metrics per page type\n- Log detailed error context for failures\n\n**Error Messages:**\n- Clear distinction between different failure types\n- Actionable error messages for debugging\n- Context about page type and selectors used",
+          "testStrategy": "Test error scenarios and verify error messages are clear and actionable. Check logs contain sufficient debugging information.",
+          "acceptanceCriteria": [
+            "Error messages clearly indicate failure type",
+            "Logs show page type detection results",
+            "Logs show selector strategy used",
+            "Performance metrics are logged",
+            "Error context is sufficient for debugging"
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Performance Optimization for Page Type Detection",
+          "description": "Optimize page type detection to minimize performance impact on crawling",
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [1, 3],
+          "details": "Optimize the page type detection for minimal performance impact:\n\n**Optimization Strategies:**\n- Cache page type detection results\n- Optimize regex patterns for speed\n- Minimize string operations\n- Profile and benchmark detection performance\n\n**Implementation:**\n- LRU cache for URL pattern results\n- Compiled regex patterns\n- Performance benchmarking\n- Memory usage optimization",
+          "testStrategy": "Performance benchmarks before and after optimization. Memory usage profiling. Load testing with many URLs.",
+          "acceptanceCriteria": [
+            "Page type detection under 1ms per URL",
+            "Memory usage remains stable",
+            "Cache hit rate >90% in typical usage",
+            "No memory leaks in long-running processes",
+            "Overall crawling performance not impacted"
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Create Integration Test Suite",
+          "description": "Develop comprehensive integration tests covering both page types and edge cases",
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [4, 5],
+          "details": "Create a comprehensive integration test suite:\n\n**Test Coverage:**\n- End-to-end city listing scraping\n- End-to-end restaurant page scraping\n- Mixed page type scenarios\n- Error handling and recovery\n- Performance under load\n\n**Test Implementation:**\n- Automated test suite with CI/CD integration\n- Mock and real URL testing\n- Performance regression testing\n- Error scenario testing\n- Load testing capabilities",
+          "testStrategy": "Run full integration tests in CI/CD pipeline. Test against live HappyCow URLs and mock scenarios.",
+          "acceptanceCriteria": [
+            "All integration tests pass consistently",
+            "Tests cover both page types comprehensively",
+            "Error scenarios are properly tested",
+            "Performance benchmarks are maintained",
+            "Tests can run in CI/CD environment"
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Update Documentation and Code Comments",
+          "description": "Document the new page type detection and conditional crawling logic",
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [3, 6],
+          "details": "Update documentation to reflect the new page-type-aware crawling:\n\n**Documentation Updates:**\n- Code comments explaining page type detection\n- README updates for new crawling behavior\n- API documentation for new functions\n- Troubleshooting guide for common issues\n\n**Content Requirements:**\n- Clear explanation of page type detection logic\n- Examples of different URL patterns\n- Selector strategy documentation\n- Error handling and debugging guide",
+          "testStrategy": "Review documentation for completeness and accuracy. Verify examples work as documented.",
+          "acceptanceCriteria": [
+            "Code is well-commented and self-documenting",
+            "README accurately describes new functionality",
+            "API documentation is complete and accurate",
+            "Troubleshooting guide helps resolve common issues",
+            "Examples in documentation work correctly"
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Deploy and Monitor Initial Implementation",
+          "description": "Deploy the page-type-aware crawling and monitor for issues",
+          "status": "pending",
+          "priority": "high",
+          "dependencies": [9],
+          "details": "Deploy the new implementation with monitoring:\n\n**Deployment Strategy:**\n- Gradual rollout starting with test URLs\n- Monitor success/failure rates by page type\n- Performance monitoring and alerting\n- Rollback plan if issues arise\n\n**Monitoring Requirements:**\n- Success rate metrics per page type\n- Performance metrics (response time, memory usage)\n- Error rate and error type tracking\n- Page type detection accuracy metrics",
+          "testStrategy": "Monitor deployment in production environment. Track metrics and respond to any issues quickly.",
+          "acceptanceCriteria": [
+            "Deployment completes without errors",
+            "City page success rate maintains >95%",
+            "Restaurant page success rate achieves >95%",
+            "Performance metrics within acceptable ranges",
+            "No critical errors or system instability"
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Post-Deployment Optimization and Tuning",
+          "description": "Optimize and tune the implementation based on real-world usage data",
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [11],
+          "details": "Optimize the implementation based on production data:\n\n**Optimization Areas:**\n- Selector effectiveness analysis\n- Timeout optimization per page type\n- Error handling improvements\n- Performance tuning based on real usage\n\n**Data Analysis:**\n- Analyze which selectors work best in practice\n- Identify common failure patterns\n- Optimize timeout values based on real performance\n- Improve error handling based on observed errors\n\n**Implementation:**\n- Selector strategy refinements\n- Configuration parameter tuning\n- Error handling improvements\n- Performance optimizations",
+          "testStrategy": "Analyze production metrics and logs. Test optimizations in staging before production deployment.",
+          "acceptanceCriteria": [
+            "Selector strategies optimized based on real data",
+            "Timeout values tuned for optimal performance",
+            "Error handling covers observed failure patterns",
+            "Overall system performance improved from baseline",
+            "Success rates maintained or improved"
+          ]
+        }
+      ]
     }
   }
 }

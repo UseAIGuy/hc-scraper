@@ -36,6 +36,10 @@ class ScrapingConfig:
     resume_from_page: int = 1  # Which page to start from within a city
     max_pages_per_city: Optional[int] = None  # Limit pages per city (for testing)
     
+    # Proxy settings
+    custom_proxy: Optional[str] = None
+    decodo_proxy_url: Optional[str] = None
+    
     # Ollama
     ollama_url: str = "http://localhost:11434"
     ollama_model: str = "llama2"
@@ -44,11 +48,17 @@ class ScrapingConfig:
     request_delay: float = 1.0
     error_delay: float = 5.0
     max_retries: int = 3
+    
+    def get_decodo_proxy_url(self) -> Optional[str]:
+        """Get the Decodo proxy URL if configured"""
+        return self.decodo_proxy_url
 
 def load_config() -> ScrapingConfig:
     return ScrapingConfig(
         supabase_url=os.getenv("SUPABASE_URL", ""),
         supabase_key=os.getenv("SUPABASE_KEY", ""),
+        custom_proxy=os.getenv("CUSTOM_PROXY"),
+        decodo_proxy_url=os.getenv("DECODO_PROXY_URL"),
         ollama_url=os.getenv("OLLAMA_URL", "http://localhost:11434"),
         ollama_model=os.getenv("OLLAMA_MODEL", "llama2"),
     )

@@ -1,0 +1,37 @@
+# Async/Await Bug Fix PRD
+
+## Problem Statement
+The HappyCow scraper is experiencing a critical bug where only restaurant names and cuisine types are being extracted, while all other fields (address, phone, website, rating, etc.) are failing with "empty or missing" warnings. This is caused by incorrect `await` keywords being used on non-async methods in the field extraction system.
+
+## Root Cause Analysis
+The `_extract_field()` method in `enhanced_extraction_engine.py` incorrectly uses `await` on two synchronous methods:
+1. `_extract_css_selector()` - defined as `def` (sync) but called with `await`
+2. `_process_field_value()` - defined as `def` (sync) but called with `await`
+
+This causes TypeError exceptions that prevent field extraction from working.
+
+## Solution Requirements
+1. Remove incorrect `await` keywords from sync method calls
+2. Verify all field extraction methods work correctly
+3. Test with actual restaurant data to ensure all fields are extracted
+4. Verify array serialization to Supabase continues to work
+5. Ensure no regression in name extraction or cuisine type extraction
+
+## Success Criteria
+- All restaurant fields (name, address, phone, website, rating, review_count, description, hours, etc.) are extracted successfully
+- No "empty or missing" warnings for fields that have data on the page
+- Restaurant data is successfully saved to Supabase with all fields populated
+- Array fields (cuisine_types, features) are properly serialized
+- No breaking changes to existing functionality
+
+## Technical Specifications
+- Fix locations: lines 128, 130, and 146 in enhanced_extraction_engine.py
+- Methods affected: _extract_css_selector, _process_field_value
+- Testing approach: Run scraper on Dallas restaurant and verify all fields are extracted
+- Rollback plan: Revert the await keywords if any issues arise
+
+## Implementation Notes
+- This is a minimal 2-line fix that should have no side effects
+- The async function can safely call sync functions without await
+- Pattern is already proven to work in _extract_restaurant_name method
+- No changes needed to field mappings, cleanup functions, or data processing logic 

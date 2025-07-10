@@ -1,0 +1,354 @@
+# HappyCow Scraper Web Dashboard - Product Requirements Document
+
+## 1. Product Overview
+
+### 1.1 Purpose
+Create a comprehensive web-based dashboard for monitoring, controlling, and analyzing the HappyCow restaurant scraper system. The dashboard will provide real-time visibility into scraping operations, city-by-city progress tracking, and intuitive controls for managing scraping sessions.
+
+### 1.2 Target Users
+- **Primary**: Project administrators and developers managing the scraper
+- **Secondary**: Data analysts reviewing scraping progress and results
+
+### 1.3 Success Metrics
+- Reduce scraper management time by 80%
+- Provide real-time visibility into scraping progress
+- Enable non-technical users to operate the scraper
+- Achieve 99% uptime for dashboard monitoring
+
+## 2. Core Features
+
+### 2.1 City Status Overview Dashboard
+**Priority: High**
+
+**Requirements:**
+- Display all available cities in a card-based layout
+- Show completion progress for each city (restaurants scraped vs total available)
+- Display review collection statistics per city
+- Color-coded status indicators (Green: >80%, Yellow: 20-80%, Red: <20%, Gray: Not started)
+- Last scraped timestamp for each city
+- Quick action buttons for resuming scraping per city
+
+**Data Points per City:**
+- City name with country flag
+- Progress bar: "152/200 restaurants (76%)"
+- Review count: "1,240 reviews collected"
+- Last activity: "2 hours ago"
+- Status: Active/Paused/Completed/Error
+
+**Summary Statistics:**
+- Total restaurants across all cities
+- Total reviews collected
+- Number of cities completed
+- Current scraping status
+
+### 2.2 Scraper Control Panel
+**Priority: High**
+
+**City Selection:**
+- Dropdown menu with all available cities
+- Search/filter functionality
+- Display estimated total restaurants when city is selected
+- Show current completion status for selected city
+
+**Scraping Parameters:**
+- Max Restaurants: Number input with slider (range: 1-500, default: 50)
+- Concurrent Sessions: Number input with slider (range: 1-10, default: 3)
+- Delay Settings: Dropdown options (Conservative: 5-10s, Normal: 3-6s, Aggressive: 1-3s)
+- Resume Mode: Checkbox "Skip already scraped restaurants" (default: checked)
+
+**User Agent Rotation Settings:**
+- Rotation Mode: Per Request/Per Session/Time-based
+- Browser Mix: Chrome %, Firefox %, Safari %, Edge %
+- Operating Systems: Windows/macOS/Linux checkboxes
+- Device Types: Desktop/Mobile/Tablet mix
+- Randomization Level: Conservative/Moderate/Aggressive
+
+**Action Controls:**
+- Start Scraping button (primary green)
+- Pause Current button (yellow)
+- Stop All button (red)
+- Estimate Time button (shows projected completion time)
+
+### 2.3 Real-time Activity Monitor
+**Priority: High**
+
+**Live Log Stream:**
+- Scrolling log window with color-coded messages
+- Message types: Info (blue), Success (green), Warning (yellow), Error (red)
+- Auto-scroll to latest messages
+- Log filtering by message type
+- Export logs functionality
+
+**Current Session Statistics:**
+- Restaurants scraped this session: X/Y
+- Reviews collected: count
+- Average time per restaurant: seconds
+- Estimated time remaining
+- Success rate percentage
+- Current restaurant being processed
+
+**Progress Indicators:**
+- Overall session progress bar
+- Per-restaurant progress indicator
+- Rate limiting status indicator
+- Connection health indicator
+
+### 2.4 Database Management Interface
+**Priority: Medium**
+
+**Connection Management:**
+- Database connection status indicator
+- Test connection button
+- Connection retry mechanism
+- Supabase credentials management (masked display)
+
+**Data Export:**
+- Export restaurant data (CSV, JSON formats)
+- Export review data with filtering options
+- Export scraping logs
+- Scheduled export functionality
+
+### 2.5 Analytics and Reporting
+**Priority: Medium**
+
+**Charts and Visualizations:**
+- Scraping progress over time (line chart)
+- City completion comparison (bar chart)
+- Success rate trends
+- Error frequency analysis
+- Performance metrics (speed, efficiency)
+
+**Restaurant Detail Modal:**
+- Click any restaurant to view detailed information
+- Show all extracted data fields
+- Data quality indicators (missing fields highlighted)
+- Individual restaurant re-scrape option
+- Review preview with pagination
+
+## 3. Technical Requirements
+
+### 3.1 Frontend Technology Stack
+- **Framework**: React.js with TypeScript
+- **Styling**: Tailwind CSS for responsive design
+- **Charts**: Chart.js or Recharts for visualizations
+- **State Management**: React Context or Redux Toolkit
+- **Real-time Updates**: WebSocket connection
+- **Build Tool**: Vite for fast development
+
+### 3.2 Backend Technology Stack
+- **API Framework**: FastAPI (Python)
+- **Database**: Supabase (PostgreSQL)
+- **WebSocket**: FastAPI WebSocket support
+- **Background Tasks**: Celery with Redis
+- **Authentication**: JWT tokens
+- **CORS**: Enabled for frontend communication
+
+### 3.3 API Endpoints Required
+
+**City Management:**
+- `GET /api/cities/status` - Get all city statistics
+- `GET /api/cities/{city}/details` - Get detailed city information
+- `GET /api/cities/{city}/restaurants` - Get restaurants for a city
+
+**Scraper Control:**
+- `POST /api/scrape/start` - Start scraping with parameters
+- `POST /api/scrape/pause` - Pause current scraping
+- `POST /api/scrape/stop` - Stop all scraping
+- `GET /api/scrape/status` - Get current scraping status
+
+**Real-time Communication:**
+- `WS /api/ws/logs` - WebSocket for live log streaming
+- `WS /api/ws/progress` - WebSocket for progress updates
+
+**Data Export:**
+- `GET /api/export/restaurants` - Export restaurant data
+- `GET /api/export/reviews` - Export review data
+- `GET /api/export/logs` - Export scraping logs
+
+### 3.4 Database Schema Extensions
+
+**New Tables Required:**
+```sql
+-- Scraping sessions tracking
+CREATE TABLE scraping_sessions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    city_name VARCHAR(100) NOT NULL,
+    started_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    ended_at TIMESTAMP WITH TIME ZONE,
+    status VARCHAR(20) DEFAULT 'running',
+    parameters JSONB,
+    restaurants_target INTEGER,
+    restaurants_completed INTEGER DEFAULT 0,
+    reviews_collected INTEGER DEFAULT 0,
+    success_rate DECIMAL(5,2),
+    error_count INTEGER DEFAULT 0
+);
+
+-- Scraping logs for dashboard display
+CREATE TABLE scraping_logs (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    session_id UUID REFERENCES scraping_sessions(id),
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    level VARCHAR(20) NOT NULL, -- INFO, SUCCESS, WARNING, ERROR
+    message TEXT NOT NULL,
+    restaurant_url VARCHAR(500),
+    details JSONB
+);
+
+-- User agent rotation tracking
+CREATE TABLE user_agents (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_agent TEXT NOT NULL,
+    browser VARCHAR(50),
+    os VARCHAR(50),
+    device_type VARCHAR(20),
+    last_used TIMESTAMP WITH TIME ZONE,
+    success_count INTEGER DEFAULT 0,
+    blocked_count INTEGER DEFAULT 0,
+    is_active BOOLEAN DEFAULT true
+);
+```
+
+### 3.5 Performance Requirements
+- Dashboard load time: < 2 seconds
+- Real-time updates: < 500ms latency
+- Support for 10+ concurrent scraping sessions
+- Handle 1000+ log messages per minute
+- Responsive design for mobile/tablet/desktop
+
+### 3.6 Security Requirements
+- API authentication using JWT tokens
+- Rate limiting on API endpoints
+- Input validation and sanitization
+- HTTPS only in production
+- Secure credential storage
+
+## 4. User Experience Flow
+
+### 4.1 Initial Dashboard Load
+1. User navigates to dashboard URL
+2. Dashboard loads city status overview
+3. Real-time WebSocket connection established
+4. Live data begins streaming
+
+### 4.2 Starting a Scraping Session
+1. User selects city from dropdown
+2. City statistics and estimated totals display
+3. User configures scraping parameters
+4. User clicks "Start Scraping"
+5. Session begins, real-time monitoring starts
+6. Progress updates stream to dashboard
+
+### 4.3 Monitoring Active Sessions
+1. Live log stream shows current activity
+2. Progress bars update in real-time
+3. Statistics refresh automatically
+4. Error alerts display immediately
+5. User can pause/stop at any time
+
+## 5. Design Specifications
+
+### 5.1 Color Scheme
+- Primary: Modern blue (#2563eb)
+- Success: Green (#10b981)
+- Warning: Amber (#f59e0b)
+- Error: Red (#ef4444)
+- Background: Clean white/light gray (#f8fafc)
+- Text: Dark gray (#1f2937)
+
+### 5.2 Typography
+- Headers: Inter or similar modern sans-serif, bold
+- Body text: Inter regular
+- Data/logs: JetBrains Mono or similar monospace
+- UI elements: Inter medium
+
+### 5.3 Layout Principles
+- Responsive grid layout
+- Mobile-first design approach
+- Consistent spacing (8px grid system)
+- Clear visual hierarchy
+- Smooth animations and transitions
+- Dark mode support
+
+### 5.4 Component Library
+- Reusable UI components
+- Consistent button styles
+- Standardized form inputs
+- Loading states and skeletons
+- Error boundary components
+
+## 6. Development Phases
+
+### Phase 1: Core Dashboard (Week 1-2)
+- City status overview
+- Basic scraper controls
+- Real-time log streaming
+- Database integration
+
+### Phase 2: Advanced Features (Week 3-4)
+- User agent rotation settings
+- Analytics and charts
+- Data export functionality
+- Restaurant detail modals
+
+### Phase 3: Polish and Optimization (Week 5)
+- Performance optimization
+- Mobile responsiveness
+- Error handling improvements
+- User experience refinements
+
+## 7. Testing Requirements
+
+### 7.1 Unit Testing
+- Frontend component testing (React Testing Library)
+- Backend API endpoint testing (pytest)
+- Database query testing
+- WebSocket connection testing
+
+### 7.2 Integration Testing
+- End-to-end scraping workflow
+- Real-time update functionality
+- Data export accuracy
+- Cross-browser compatibility
+
+### 7.3 Performance Testing
+- Load testing with multiple concurrent sessions
+- WebSocket stress testing
+- Database performance under load
+- Frontend rendering performance
+
+## 8. Deployment Requirements
+
+### 8.1 Infrastructure
+- Frontend: Vercel or Netlify
+- Backend: Railway, Render, or similar
+- Database: Supabase (existing)
+- WebSocket: Same as backend API
+
+### 8.2 Environment Configuration
+- Development environment setup
+- Staging environment for testing
+- Production environment with monitoring
+- Environment variable management
+
+### 8.3 Monitoring and Logging
+- Application performance monitoring
+- Error tracking and alerting
+- Usage analytics
+- System health monitoring
+
+## 9. Future Enhancements
+
+### 9.1 Advanced Features
+- Scheduled scraping automation
+- Multi-user support with role-based access
+- Advanced analytics and reporting
+- Integration with external monitoring tools
+
+### 9.2 Scalability Improvements
+- Distributed scraping across multiple servers
+- Advanced load balancing
+- Database sharding for large datasets
+- Caching layer for improved performance
+
+This PRD provides comprehensive guidance for building a professional, feature-rich web dashboard for the HappyCow scraper system. 
