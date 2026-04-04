@@ -292,7 +292,7 @@ class PlaywrightScraper:
                 base = url.rstrip("/") + "/"
                 page_url = base + f"?page={current_page}"
                 logger.info(f"Navigating to page {current_page}: {page_url}")
-                page.goto(page_url, wait_until="networkidle", timeout=60000)
+                page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
                 random_delay(2, 4)
                 self._wait_for_venues(page)
 
