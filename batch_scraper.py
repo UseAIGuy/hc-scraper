@@ -87,10 +87,27 @@ def batch_scrape(count: int = 5):
             error_msg = str(e)[:500]
             logger.error(f"[{i+1}/{count}] Failed: {city_name} - {error_msg}")
 
-            supabase.rpc(
-                "update_city_status",
-                {"city_id": city_id, "new_status": "error", "error_msg": error_msg},
-            ).execute()
+            # If WAF blocked, reset city to pending (not an error) and stop batch
+            if "WAF_BLOCKED" in error_msg:
+                supabase.rpc(
+                    "update_city_status",
+                    {"city_id": city_id, "new_status": "pending"},
+                ).execute()
+                results.append(
+                    {
+                        "city": city_name,
+                        "state": state_name,
+                        "status": "waf_blocked",
+                        "duration": duration,
+                    }
+                )
+                logger.warning("WAF block detected — stopping batch to avoid further blocking")
+                break
+            else:
+                supabase.rpc(
+                    "update_city_status",
+                    {"city_id": city_id, "new_status": "error", "error_msg": error_msg},
+                ).execute()
 
             results.append(
                 {

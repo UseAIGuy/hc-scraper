@@ -215,6 +215,20 @@ class PlaywrightScraper:
         if self.pw:
             self.pw.stop()
 
+    def _check_waf_block(self, page: Page) -> bool:
+        """Check if the page is a WAF block page (Imperva/Incapsula)."""
+        try:
+            content = page.content()
+            if "Access denied" in content and "Error 15" in content:
+                logger.warning("Imperva WAF block detected (Error 15) - IP is rate-limited")
+                return True
+            if "incapsula" in content.lower() and "blocked" in content.lower():
+                logger.warning("Incapsula WAF block detected")
+                return True
+        except Exception:
+            pass
+        return False
+
     def _wait_for_venues(self, page: Page, timeout_ms: int = 30000):
         """Wait until venue list items are present in the DOM."""
         try:
@@ -237,6 +251,10 @@ class PlaywrightScraper:
             logger.info(f"Loading page 1: {url}")
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
             random_delay(2, 5)
+
+            if self._check_waf_block(page):
+                raise RuntimeError("WAF_BLOCKED: IP is rate-limited by Imperva")
+
             self._wait_for_venues(page)
 
             while current_page <= self.max_pages:
@@ -267,25 +285,15 @@ class PlaywrightScraper:
                     logger.info("No more pages")
                     break
 
-                # Navigate to next page by clicking the pagination link
+                # Navigate to next page via URL (more reliable than click)
                 current_page += 1
-                next_link = page.query_selector(
-                    f'.pagination-link[data-page="{current_page}"]'
-                )
-                if not next_link:
-                    logger.info("No next page link found, stopping")
-                    break
-
                 random_delay(3, 8)
-                try:
-                    next_link.click()
-                except Exception:
-                    # Element may have detached; use URL navigation as fallback
-                    logger.info(f"Click failed, navigating to page {current_page} via URL")
-                    page_url = url.rstrip("/") + f"?page={current_page}"
-                    page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
-                # Wait for the venue list to refresh
-                page.wait_for_timeout(2000)
+                page_url = url.rstrip("/") + f"?page={current_page}"
+                logger.info(f"Navigating to page {current_page}: {page_url}")
+                page.close()
+                page = self.context.new_page()
+                page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
+                random_delay(2, 4)
                 self._wait_for_venues(page)
 
         except Exception as e:
