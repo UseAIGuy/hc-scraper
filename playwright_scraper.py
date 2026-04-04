@@ -285,14 +285,14 @@ class PlaywrightScraper:
                     logger.info("No more pages")
                     break
 
-                # Navigate to next page via URL (more reliable than click)
+                # Navigate to next page via URL on the same page/tab
+                # (opening a new page triggers anti-bot detection)
                 current_page += 1
                 random_delay(3, 8)
-                page_url = url.rstrip("/") + f"?page={current_page}"
+                base = url.rstrip("/") + "/"
+                page_url = base + f"?page={current_page}"
                 logger.info(f"Navigating to page {current_page}: {page_url}")
-                page.close()
-                page = self.context.new_page()
-                page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
+                page.goto(page_url, wait_until="networkidle", timeout=60000)
                 random_delay(2, 4)
                 self._wait_for_venues(page)
 
