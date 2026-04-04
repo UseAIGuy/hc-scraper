@@ -277,7 +277,13 @@ class PlaywrightScraper:
                     break
 
                 random_delay(3, 8)
-                next_link.click()
+                try:
+                    next_link.click()
+                except Exception:
+                    # Element may have detached; use URL navigation as fallback
+                    logger.info(f"Click failed, navigating to page {current_page} via URL")
+                    page_url = url.rstrip("/") + f"?page={current_page}"
+                    page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
                 # Wait for the venue list to refresh
                 page.wait_for_timeout(2000)
                 self._wait_for_venues(page)
@@ -368,6 +374,12 @@ def upsert_venues(venues: List[Dict]) -> int:
 
     if not rows:
         return 0
+
+    # Deduplicate by venue_id (keep last seen)
+    seen = {}
+    for r in rows:
+        seen[r["venue_id"]] = r
+    rows = list(seen.values())
 
     # Upsert in batches of 100
     batch_size = 100
